@@ -1,0 +1,15 @@
+Esta pasta contém as imagens dos itens do cardápio.
+
+Para adicionar imagens:
+1. Coloque as fotos nesta pasta
+2. Use os nomes especificados no arquivo src/data/menu.ts
+3. Formatos suportados: JPG, PNG, WebP
+4. Tamanho recomendado: 400x300px
+
+Exemplos de nomes de arquivo:
+- tapioca-delicia.jpg
+- tapioca-pe-sogra.jpg
+- tapioca-racudo.jpg
+- etc.
+
+Se uma imagem não for encontrada, será exibido um placeholder com emoji de tapioca. 
