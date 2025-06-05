@@ -34,7 +34,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ item, index }) => {
       />
       
       <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 border border-gray-100">
-        <div className="relative h-48 bg-gradient-to-br from-yellow-100 to-yellow-200">
+        <div className="relative h-32 sm:h-40 lg:h-48 bg-gradient-to-br from-yellow-100 to-yellow-200">
           {item.image ? (
             <Image
               src={item.image}
@@ -49,10 +49,10 @@ export const MenuItem: React.FC<MenuItemProps> = ({ item, index }) => {
             />
           ) : (
             <div className="flex items-center justify-center h-full">
-                          <div className="text-center text-yellow-700">
-              <div className="text-4xl mb-2">🌮</div>
-              <p className="text-sm font-medium">Foto em breve</p>
-            </div>
+              <div className="text-center text-yellow-700">
+                <div className="text-2xl sm:text-3xl lg:text-4xl mb-1 sm:mb-2">🌮</div>
+                <p className="text-xs sm:text-sm font-medium">Foto em breve</p>
+              </div>
             </div>
           )}
           
@@ -62,42 +62,48 @@ export const MenuItem: React.FC<MenuItemProps> = ({ item, index }) => {
             </div>
           )}
           
-          <div className="absolute top-2 left-2 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+          <div className="absolute top-1 sm:top-2 left-1 sm:left-2 bg-primary-600 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold">
             {index}
           </div>
         </div>
         
-        <div className="p-4">
-          <h3 className="text-lg font-bold text-gray-800 mb-2 uppercase">
+        <div className="p-3 sm:p-4">
+          <h3 className="text-sm sm:text-lg font-bold text-gray-800 mb-1 sm:mb-2 uppercase leading-tight">
             {item.name}
           </h3>
           
-          <p className="text-gray-600 text-sm mb-3 leading-relaxed">
+          <p className="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-3 leading-relaxed">
             {item.description}
           </p>
           
-          <div className="flex flex-wrap gap-1 mb-3">
-            {item.ingredients.map((ingredient, idx) => (
+          <div className="flex flex-wrap gap-1 mb-2 sm:mb-3">
+            {item.ingredients.slice(0, 3).map((ingredient, idx) => (
               <span
                 key={idx}
-                className="bg-primary-100 text-primary-700 px-2 py-1 rounded-full text-xs font-medium"
+                className="bg-primary-100 text-primary-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-xs font-medium"
               >
                 {ingredient}
               </span>
             ))}
+            {item.ingredients.length > 3 && (
+              <span className="bg-gray-100 text-gray-600 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full text-xs font-medium">
+                +{item.ingredients.length - 3}
+              </span>
+            )}
           </div>
           
           <div className="flex justify-between items-center">
-            <span className="text-2xl font-bold text-primary-600">
+            <span className="text-lg sm:text-xl lg:text-2xl font-bold text-primary-600">
               {formatPrice(item.price)}
             </span>
             
             <button 
               onClick={handleAddToCart}
-              className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center space-x-1"
+              className="bg-primary-600 hover:bg-primary-700 text-white px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-colors duration-200 flex items-center space-x-1"
             >
-              <Plus className="w-4 h-4" />
-              <span>Adicionar</span>
+              <Plus className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="hidden sm:inline">Adicionar</span>
+              <span className="sm:hidden">+</span>
             </button>
           </div>
         </div>

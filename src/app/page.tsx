@@ -33,7 +33,7 @@ export default function Home() {
             onCategoryChange={setActiveCategory}
           />
           
-          <main className="max-w-7xl mx-auto px-4 pb-12">
+          <main className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 pb-12">
             <OrderInstructions />
             
             {currentCategory && (

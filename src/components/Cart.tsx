@@ -32,12 +32,12 @@ export const Cart: React.FC = () => {
       {/* Botão do Carrinho Flutuante */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 left-6 bg-primary-600 hover:bg-primary-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50"
+        className="fixed bottom-4 sm:bottom-6 left-4 sm:left-6 bg-primary-600 hover:bg-primary-700 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50"
       >
         <div className="relative">
-          <ShoppingCart className="w-6 h-6" />
+          <ShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
           {state.itemCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-secondary-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">
+            <span className="absolute -top-1 sm:-top-2 -right-1 sm:-right-2 bg-secondary-500 text-white text-xs rounded-full w-4 h-4 sm:w-5 sm:h-5 flex items-center justify-center font-bold">
               {state.itemCount}
             </span>
           )}
@@ -46,19 +46,19 @@ export const Cart: React.FC = () => {
 
       {/* Modal do Carrinho */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-hidden">
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-2 sm:p-4">
+          <div className="bg-white rounded-lg max-w-sm sm:max-w-md w-full max-h-[95vh] sm:max-h-[90vh] overflow-hidden">
             {/* Header */}
-            <div className="bg-primary-600 text-white p-4 flex justify-between items-center">
-              <h2 className="text-xl font-bold flex items-center space-x-2">
-                <ShoppingCart className="w-5 h-5" />
+            <div className="bg-primary-600 text-white p-3 sm:p-4 flex justify-between items-center">
+              <h2 className="text-lg sm:text-xl font-bold flex items-center space-x-2">
+                <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Meu Pedido</span>
               </h2>
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-white hover:text-gray-200"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
             </div>
 
