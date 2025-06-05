@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🌮 Cardápio Digital - Tapioca Recheada de Chapa
 
 Um cardápio digital moderno e responsivo para a Tapioca Recheada de Chapa, com funcionalidade de geração de PDF.
@@ -218,3 +219,6 @@ Para dúvidas ou sugestões sobre o cardápio digital, entre em contato através
 ---
 
 **Desenvolvido com ❤️ para a Tapioca Recheada de Chapa** 
+=======
+# cardapio-tapioca-recheada
+>>>>>>> a5c751ef284bf4bb86a305cd4742434aaf325786

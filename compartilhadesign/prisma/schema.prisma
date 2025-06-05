@@ -1,0 +1,83 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  firstName String
+  lastName  String
+  cpf       String   @unique
+  phone     String
+  plan      Plan     @relation(fields: [planId], references: [id])
+  planId    String
+  stripeCustomerId String?
+  vectorizations Vectorization[]
+  subscriptions Subscription[]
+  downloads Download[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Plan {
+  id        String   @id @default(uuid())
+  name      String
+  description String
+  features  String[]
+  price     Float
+  duration  Int      // em dias
+  isActive  Boolean  @default(false)
+  stripePriceId String?
+  startDate DateTime?
+  endDate   DateTime?
+  users     User[]
+  subscriptions Subscription[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Vectorization {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id])
+  originalUrl String
+  resultUrl   String
+  status      String   @default("pending")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Subscription {
+  id                   String   @id @default(cuid())
+  userId               String   @unique
+  planId               String
+  status               String   // active, cancelled, expired
+  startDate            DateTime
+  endDate              DateTime
+  stripeSubscriptionId String?  @unique
+  stripeCustomerId     String?
+  stripePaymentIntentId String?  @unique
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+  user                 User     @relation(fields: [userId], references: [id])
+  plan                 Plan     @relation(fields: [planId], references: [id])
+}
+
+model Download {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  fileName  String
+  status    String   @default("pending")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+} 

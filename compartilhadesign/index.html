@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Crie sua conta no Compartilha Design e tenha acesso às melhores ferramentas de design" />
+    <meta name="theme-color" content="#fe8a05" />
+    <title>Criar conta | Compartilha Design</title>
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="/_next/static/css/285bd74d4bbf9c0a.css" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com" as="dns-prefetch" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/faviconf.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="/_next/static/css/285bd74d4bbf9c0a.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fe8a05',
+                        'primary-hover': '#e67a00',
+                        'primary-light': '#fff5eb',
+                        text: '#1a1a1a',
+                    },
+                    boxShadow: {
+                        'card': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                        'card-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Scripts -->
+    <script defer src="/_next/static/chunks/webpack-2df7a8d27de1794c.js"></script>
+    <script defer src="/_next/static/chunks/framework-63157d71ad419e09.js"></script>
+    <script defer src="/_next/static/chunks/main-c59a42b9e9a6f445.js"></script>
+    <script defer src="/_next/static/chunks/pages/_app-6f1b190abe59706e.js"></script>
+    <script defer src="/_next/static/chunks/pages/criar-conta-8ad0c8a5db11572c.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const submitButton = form.querySelector('button[type="submit"]');
+            const notificationDiv = document.querySelector('.fixed.bottom-4.right-4');
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Desabilita o botão para evitar múltiplos cliques
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Processando...';
+                
+                try {
+                    // Validação básica dos campos
+                    const password = document.getElementById('password').value;
+                    const confirmPassword = document.getElementById('confirmPassword').value;
+                    
+                    if (password !== confirmPassword) {
+                        throw new Error('As senhas não coincidem');
+                    }
+
+                    // Coleta os dados do formulário
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData.entries());
+
+                    // Envia os dados para a API
+                    const response = await fetch('/api/signup', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(data)
+                    });
+
+                    const result = await response.json();
+
+                    if (!response.ok) {
+                        throw new Error(result.message || 'Erro ao processar o cadastro');
+                    }
+
+                    // Mostra mensagem de sucesso
+                    showNotification('Cadastro realizado com sucesso!', 'success');
+                    
+                    // Redireciona após 2 segundos
+                    setTimeout(() => {
+                        window.location.href = '/dashboard';
+                    }, 2000);
+
+                } catch (error) {
+                    // Mostra mensagem de erro
+                    showNotification(error.message || 'Ocorreu um erro. Tente novamente.', 'error');
+                    
+                    // Reabilita o botão
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Finalizar';
+                }
+            });
+
+            function showNotification(message, type) {
+                const notification = document.createElement('div');
+                notification.className = `p-4 rounded-lg shadow-lg ${
+                    type === 'success' ? 'bg-green-500' : 'bg-red-500'
+                } text-white`;
+                notification.textContent = message;
+                
+                notificationDiv.appendChild(notification);
+                
+                // Remove a notificação após 5 segundos
+                setTimeout(() => {
+                    notification.remove();
+                }, 5000);
+            }
+        });
+    </script>
+</head>
+
+<body class="font-sans text-text bg-gradient-to-b from-gray-50 to-white">
+    <div id="__next">
+        <header class="bg-white py-6 shadow-card">
+            <nav class="container mx-auto px-4" aria-label="Navegação principal">
+                <a href="/" class="block w-48 mx-auto">
+                    <img src="/_next/static/media/logo.21aa9a7e.png" alt="Logo Compartilha Design" class="w-full h-auto" />
+                </a>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-4 py-12">
+            <section class="mb-16" aria-labelledby="plans-title">
+                <h1 id="plans-title" class="text-3xl font-bold mb-4 text-center">Planos disponíveis</h1>
+                <p class="text-gray-600 text-center mb-12">Escolha o plano que melhor se adapta às suas necessidades</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Plano Mensal -->
+                    <article class="bg-white rounded-xl p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
+                        <header class="text-center mb-8">
+                            <h2 class="text-2xl font-bold">Mensal</h2>
+                            <div class="mt-4">
+                                <p class="text-4xl font-bold text-primary">R$ 34,90</p>
+                                <p class="text-sm text-gray-600">/mês</p>
+                            </div>
+                            <button class="mt-6 w-full py-3 px-6 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg" aria-label="Escolher plano mensal">
+                                ESCOLHER
+                            </button>
+                        </header>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4 pb-2 border-b border-gray-200">
+                                <img src="images/freepik-icon.svg" alt="" aria-hidden="true" class="w-6 h-6" />
+                                <span>Freepik - 10 downloads diários</span>
+                            </li>
+                            <!-- ... outros recursos ... -->
+                        </ul>
+                    </article>
+
+                    <!-- Plano Trimestral -->
+                    <article class="bg-white rounded-xl p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover border-2 border-primary relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-primary text-white text-sm font-semibold px-4 py-1 rounded-full">Mais Popular</span>
+                        </div>
+                        <header class="text-center mb-8">
+                            <h2 class="text-2xl font-bold">Trimestral</h2>
+                            <div class="mt-4">
+                                <p class="text-4xl font-bold text-primary">R$ 89,70</p>
+                                <p class="text-sm text-gray-600">Equivalente a R$ 29,90/mês</p>
+                            </div>
+                            <button class="mt-6 w-full py-3 px-6 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg" aria-label="Escolher plano trimestral">
+                                ESCOLHER
+                            </button>
+                        </header>
+                        <!-- ... recursos do plano trimestral ... -->
+                    </article>
+
+                    <!-- Plano Semestral -->
+                    <article class="bg-white rounded-xl p-8 shadow-card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover">
+                        <!-- ... conteúdo do plano semestral ... -->
+                    </article>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-xl p-8 md:p-12 shadow-card" aria-labelledby="signup-title">
+                <h2 id="signup-title" class="text-3xl font-bold mb-4 text-center">
+                    Você está a um passo de acessar as melhores ferramentas de design
+                </h2>
+                <p class="text-gray-600 text-center mb-8">Preencha seus dados para criar sua conta</p>
+                
+                <form class="mt-8 space-y-8" action="/api/signup" method="POST">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <label for="firstName" class="block mb-2 font-medium">Nome</label>
+                            <input type="text" id="firstName" name="firstName" required 
+                                   class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                                   autocomplete="given-name" />
+                        </div>
+                        
+                        <div>
+                            <label for="lastName" class="block mb-2 font-medium">Sobrenome</label>
+                            <input type="text" id="lastName" name="lastName" required 
+                                   class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                                   autocomplete="family-name" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block mb-2 font-medium">Email</label>
+                        <input type="email" id="email" name="email" placeholder="email@email.com" required 
+                               class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                               autocomplete="email" />
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <label for="password" class="block mb-2 font-medium">Senha</label>
+                            <input type="password" id="password" name="password" required minlength="6"
+                                   class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                                   aria-describedby="password-requirements" />
+                            <p id="password-requirements" class="mt-2 text-sm text-gray-600">
+                                Mínimo de 6 caracteres
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <label for="confirmPassword" class="block mb-2 font-medium">Confirmar senha</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required minlength="6"
+                                   class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="cpf" class="block mb-2 font-medium">CPF</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="123.456.789-00" required 
+                               pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                               class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors" />
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block mb-2 font-medium">Telefone ou celular</label>
+                        <input type="tel" id="phone" name="phone" required 
+                               class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors"
+                               autocomplete="tel" />
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <label for="affiliateCode" class="block mb-2 font-medium">Código de afiliado</label>
+                            <input type="text" id="affiliateCode" name="affiliateCode"
+                                   class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors" />
+                        </div>
+                        
+                        <div>
+                            <label for="selectedPlan" class="block mb-2 font-medium">
+                                Selecione um plano
+                                <button type="button" class="ml-2 text-primary underline hover:text-primary-hover transition-colors" aria-label="Ver planos disponíveis">
+                                    (ver planos)
+                                </button>
+                            </label>
+                            <select id="selectedPlan" name="selectedPlan" required
+                                    class="w-full px-4 py-3 rounded-lg border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors">
+                                <option value="">Selecione um plano</option>
+                                <option value="monthly">Mensal - R$ 34,90</option>
+                                <option value="quarterly">Trimestral - R$ 89,70</option>
+                                <option value="semiannual">Semestral - R$ 167,40</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-4 bg-primary-light rounded-lg">
+                        <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required
+                               class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary" />
+                        <label for="privacyPolicy" class="text-sm">
+                            Declaro que li e aceito a 
+                            <a href="/politica-de-privacidade" target="_blank" rel="noopener"
+                               class="text-primary underline hover:text-primary-hover transition-colors">
+                                Política de Privacidade
+                            </a>
+                        </label>
+                    </div>
+
+                    <div class="mt-12 text-center">
+                        <button type="submit" 
+                                class="px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg text-lg">
+                            Finalizar
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <div class="fixed bottom-4 right-4 z-50" aria-live="polite"></div>
+    </div>
+</body>
+</html>
