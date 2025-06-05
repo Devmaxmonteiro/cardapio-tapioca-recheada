@@ -36,8 +36,7 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ restaurantInfo }) => {
         
         <div className="mt-6 bg-white/10 backdrop-blur-sm rounded-lg p-4 inline-block">
           <h2 className="text-xl font-semibold mb-2">PAGUE COM O PIX</h2>
-          <p className="text-sm">CHAVE: {restaurantInfo.pixKey}</p>
-          <p className="text-sm">NOME: {restaurantInfo.pixName}</p>
+                          <p className="text-sm">{restaurantInfo.pix}</p>
         </div>
       </div>
     </div>

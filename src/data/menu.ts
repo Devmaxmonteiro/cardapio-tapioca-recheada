@@ -1,12 +1,4 @@
-import { MenuItem, MenuCategory, RestaurantInfo } from '@/types/menu';
-
-export const restaurantInfo: RestaurantInfo = {
-  name: "Tapioca Recheada de Chapa",
-  phone: "75 98847-5658",
-  instagram: "@tapiocarecheadadechapa",
-  pixKey: "75988475658",
-  pixName: "Silvana dos Santos Silva"
-};
+import { MenuItem } from '@/types/menu';
 
 export const menuItems: MenuItem[] = [
   // Tapioca 3 e 4 sabores
@@ -16,8 +8,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, côco e manteiga",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "côco", "manteiga"],
-    image: "/images/tapioca-delicia.jpg"
+    ingredients: ["Queijo", "Côco", "Manteiga"]
   },
   {
     id: 2,
@@ -25,17 +16,15 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, ovo e frango",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "ovo", "frango"],
-    image: "/images/tapioca-pe-sogra.jpg"
+    ingredients: ["Queijo", "Ovo", "Frango"]
   },
   {
     id: 3,
-    name: "RACUDO",
+    name: "RAÇUDO",
     description: "Queijo, ovo, carne de sol e cream cheese",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "ovo", "carne de sol", "cream cheese"],
-    image: "/images/tapioca-racudo.jpg"
+    ingredients: ["Queijo", "Ovo", "Carne de sol", "Cream cheese"]
   },
   {
     id: 4,
@@ -43,8 +32,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, ovo e carne de sol",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "ovo", "carne de sol"],
-    image: "/images/tapioca-sertaneja.jpg"
+    ingredients: ["Queijo", "Ovo", "Carne de sol"]
   },
   {
     id: 5,
@@ -52,8 +40,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, ovo, calabresa e cream cheese",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "ovo", "calabresa", "cream cheese"],
-    image: "/images/tapioca-joao-grilo.jpg"
+    ingredients: ["Queijo", "Ovo", "Calabresa", "Cream cheese"]
   },
   {
     id: 6,
@@ -61,17 +48,15 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, ovo e calabresa",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "ovo", "calabresa"],
-    image: "/images/tapioca-caipira.jpg"
+    ingredients: ["Queijo", "Ovo", "Calabresa"]
   },
   {
     id: 7,
-    name: "SEVERINA NORDESTINA",
+    name: "SEVERINO NORDESTINO",
     description: "Queijo, carne de sol, frango e cream cheese",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "carne de sol", "frango", "cream cheese"],
-    image: "/images/tapioca-severina.jpg"
+    ingredients: ["Queijo", "Carne de sol", "Frango", "Cream cheese"]
   },
   {
     id: 8,
@@ -79,8 +64,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, frango e carne de sol",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "frango", "carne de sol"],
-    image: "/images/tapioca-lampiao.jpg"
+    ingredients: ["Queijo", "Frango", "Carne de sol"]
   },
   {
     id: 9,
@@ -88,8 +72,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, carne de sol, frango e ovo",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "carne de sol", "frango", "ovo"],
-    image: "/images/tapioca-caatinga.jpg"
+    ingredients: ["Queijo", "Carne de sol", "Frango", "Ovo"]
   },
   {
     id: 10,
@@ -97,8 +80,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, frango e calabresa",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "frango", "calabresa"],
-    image: "/images/tapioca-roceira.jpg"
+    ingredients: ["Queijo", "Frango", "Calabresa"]
   },
   {
     id: 11,
@@ -106,8 +88,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, frango e catupiry",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "frango", "catupiry"],
-    image: "/images/tapioca-risca-faca.jpg"
+    ingredients: ["Queijo", "Frango", "Catupiry"]
   },
   {
     id: 12,
@@ -115,8 +96,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, frango e milho",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "frango", "milho"],
-    image: "/images/tapioca-dona-flor.jpg"
+    ingredients: ["Queijo", "Frango", "Milho"]
   },
   {
     id: 13,
@@ -124,8 +104,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, frango, milho e cream cheese",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "frango", "milho", "cream cheese"],
-    image: "/images/tapioca-vixe-maria.jpg"
+    ingredients: ["Queijo", "Frango", "Milho", "Cream cheese"]
   },
   {
     id: 14,
@@ -133,8 +112,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, carne de sol e catupiry",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "carne de sol", "catupiry"],
-    image: "/images/tapioca-crendeuspai.jpg"
+    ingredients: ["Queijo", "Carne de sol", "Catupiry"]
   },
   {
     id: 15,
@@ -142,8 +120,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, bacon, frango e cream cheese",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "bacon", "frango", "cream cheese"],
-    image: "/images/tapioca-flor-mandacaru.jpg"
+    ingredients: ["Queijo", "Bacon", "Frango", "Cream cheese"]
   },
   {
     id: 16,
@@ -151,8 +128,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, milho, frango e bacon",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "milho", "frango", "bacon"],
-    image: "/images/tapioca-asa-branca.jpg"
+    ingredients: ["Queijo", "Milho", "Frango", "Bacon"]
   },
   {
     id: 17,
@@ -160,8 +136,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, bacon e frango",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "bacon", "frango"],
-    image: "/images/tapioca-lasqueira.jpg"
+    ingredients: ["Queijo", "Bacon", "Frango"]
   },
   {
     id: 18,
@@ -169,8 +144,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, carne de sol e bacon",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "carne de sol", "bacon"],
-    image: "/images/tapioca-ai-sim.jpg"
+    ingredients: ["Queijo", "Carne de sol", "Bacon"]
   },
   {
     id: 19,
@@ -178,8 +152,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, presunto, tomate, cebola e orégano",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "presunto", "tomate", "cebola", "orégano"],
-    image: "/images/tapioca-pizza.jpg"
+    ingredients: ["Queijo", "Presunto", "Tomate", "Cebola", "Orégano"]
   },
   {
     id: 20,
@@ -187,8 +160,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, carne de sol e banana terra caramelizada na manteiga",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "carne de sol", "banana terra caramelizada"],
-    image: "/images/tapioca-maria-bonita.jpg"
+    ingredients: ["Queijo", "Carne de sol", "Banana terra caramelizada"]
   },
   {
     id: 21,
@@ -196,8 +168,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, purê de macaxeira e carne de sol",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "purê de macaxeira", "carne de sol"],
-    image: "/images/tapioca-meu-xodo.jpg"
+    ingredients: ["Queijo", "Purê de macaxeira", "Carne de sol"]
   },
   {
     id: 22,
@@ -205,8 +176,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, purê de macaxeira e frango",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "purê de macaxeira", "frango"],
-    image: "/images/tapioca-cabra-macho.jpg"
+    ingredients: ["Queijo", "Purê de macaxeira", "Frango"]
   },
   {
     id: 23,
@@ -214,8 +184,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, purê de macaxeira, carne de sol e banana terra",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo", "purê de macaxeira", "carne de sol", "banana terra"],
-    image: "/images/tapioca-sertao.jpg"
+    ingredients: ["Queijo", "Purê de macaxeira", "Carne de sol", "Banana terra"]
   },
   {
     id: 24,
@@ -223,19 +192,15 @@ export const menuItems: MenuItem[] = [
     description: "Até 7 sabores",
     price: 19.00,
     category: 'tapioca-3-4',
-    ingredients: ["até 7 sabores à escolha"],
-    isSpecial: true,
-    image: "/images/tapioca-tudao.jpg"
+    ingredients: ["Até 7 sabores à escolha"]
   },
   {
     id: 25,
     name: "TAPIOCA À MODA DO CLIENTE",
-    description: "Queijo coalho ou mussarela (salada opcional)",
+    description: "Monte sua tapioca",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["queijo coalho ou mussarela", "salada opcional"],
-    isSpecial: true,
-    image: "/images/tapioca-moda-cliente.jpg"
+    ingredients: ["Ingredientes à escolha"]
   },
 
   // Tapioca 2 sabores
@@ -245,8 +210,7 @@ export const menuItems: MenuItem[] = [
     description: "Manteiga e côco",
     price: 9.00,
     category: 'tapioca-2',
-    ingredients: ["manteiga", "côco"],
-    image: "/images/tapioca-marmenino.jpg"
+    ingredients: ["Manteiga", "Côco"]
   },
   {
     id: 27,
@@ -254,8 +218,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e côco",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["queijo", "côco"],
-    image: "/images/tapioca-virgulino.jpg"
+    ingredients: ["Queijo", "Côco"]
   },
   {
     id: 28,
@@ -263,8 +226,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e ovo",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["queijo", "ovo"],
-    image: "/images/tapioca-oxente.jpg"
+    ingredients: ["Queijo", "Ovo"]
   },
   {
     id: 29,
@@ -272,8 +234,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e presunto",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["queijo", "presunto"],
-    image: "/images/tapioca-mista.jpg"
+    ingredients: ["Queijo", "Presunto"]
   },
   {
     id: 30,
@@ -281,8 +242,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e frango",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["queijo", "frango"],
-    image: "/images/tapioca-vitoria.jpg"
+    ingredients: ["Queijo", "Frango"]
   },
   {
     id: 31,
@@ -290,8 +250,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e carne de sol",
     price: 14.00,
     category: 'tapioca-2',
-    ingredients: ["queijo", "carne de sol"],
-    image: "/images/tapioca-nordestina.jpg"
+    ingredients: ["Queijo", "Carne de sol"]
   },
   {
     id: 32,
@@ -299,8 +258,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e calabresa",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["queijo", "calabresa"],
-    image: "/images/tapioca-peleja.jpg"
+    ingredients: ["Queijo", "Calabresa"]
   },
   {
     id: 33,
@@ -308,8 +266,7 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e bacon",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["queijo", "bacon"],
-    image: "/images/tapioca-sustanca.jpg"
+    ingredients: ["Queijo", "Bacon"]
   },
   {
     id: 34,
@@ -317,17 +274,15 @@ export const menuItems: MenuItem[] = [
     description: "Carne de sol e frango",
     price: 14.00,
     category: 'tapioca-2',
-    ingredients: ["carne de sol", "frango"],
-    image: "/images/tapioca-arretada.jpg"
+    ingredients: ["Carne de sol", "Frango"]
   },
   {
     id: 35,
-    name: "RACUDO",
+    name: "RAÇUDO",
     description: "Carne de sol e catupiry",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["carne de sol", "catupiry"],
-    image: "/images/tapioca-racudo-2.jpg"
+    ingredients: ["Carne de sol", "Catupiry"]
   },
   {
     id: 36,
@@ -335,8 +290,7 @@ export const menuItems: MenuItem[] = [
     description: "Frango e catupiry",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["frango", "catupiry"],
-    image: "/images/tapioca-oxe.jpg"
+    ingredients: ["Frango", "Catupiry"]
   },
   {
     id: 37,
@@ -344,8 +298,7 @@ export const menuItems: MenuItem[] = [
     description: "Frango e ovo",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["frango", "ovo"],
-    image: "/images/tapioca-matuto.jpg"
+    ingredients: ["Frango", "Ovo"]
   },
   {
     id: 38,
@@ -353,8 +306,7 @@ export const menuItems: MenuItem[] = [
     description: "Bacon e carne",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["bacon", "carne"],
-    image: "/images/tapioca-valei-me.jpg"
+    ingredients: ["Bacon", "Carne"]
   },
   {
     id: 39,
@@ -362,93 +314,465 @@ export const menuItems: MenuItem[] = [
     description: "Frango e cream cheese",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["frango", "cream cheese"],
-    image: "/images/tapioca-zemarua.jpg"
+    ingredients: ["Frango", "Cream cheese"]
+  },
+
+  // Crepioca
+  {
+    id: 40,
+    name: "PEITO DE PERU, QUEIJO COALHO E TOMATE",
+    description: "Opção saudável",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Peito de peru", "Queijo coalho", "Tomate"]
+  },
+  {
+    id: 41,
+    name: "BANANA DA TERRA CARAMELIZADA, MEL E CANELA",
+    description: "Doce especial",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Banana da terra caramelizada", "Mel", "Canela"]
+  },
+  {
+    id: 42,
+    name: "BANANA DA TERRA CARAMELIZADA E PASTA DE AMENDOIM",
+    description: "Combinação perfeita",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Banana da terra caramelizada", "Pasta de amendoim"]
+  },
+  {
+    id: 43,
+    name: "FRANGO, ABACATE E AZEITE",
+    description: "Opção fitness",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Frango", "Abacate", "Azeite"]
+  },
+  {
+    id: 44,
+    name: "FRANGO, ABACATE E QUEIJO",
+    description: "Nutritiva e saborosa",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Frango", "Abacate", "Queijo"]
+  },
+  {
+    id: 45,
+    name: "PEITO DE PERU, FRANGO",
+    description: "Rica em proteína",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Peito de peru", "Frango"]
+  },
+  {
+    id: 46,
+    name: "PEITO DE PERU, FRANGO E QUEIJO",
+    description: "Completa e nutritiva",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Peito de peru", "Frango", "Queijo"]
+  },
+  {
+    id: 47,
+    name: "QUEIJO, CÔCO E MEL",
+    description: "Doce e salgado",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Queijo", "Côco", "Mel"]
+  },
+  {
+    id: 48,
+    name: "QUEIJO, MORANGO E MEL",
+    description: "Frutada e doce",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Queijo", "Morango", "Mel"]
+  },
+  {
+    id: 49,
+    name: "PEITO DE PERU, QUEIJO E MILHO",
+    description: "Saudável e saborosa",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Peito de peru", "Queijo", "Milho"]
+  },
+  {
+    id: 50,
+    name: "FRANGO, MILHO E ORÉGANO",
+    description: "Temperada especial",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Frango", "Milho", "Orégano"]
+  },
+  {
+    id: 51,
+    name: "FRANGO, MILHO, QUEIJO E ORÉGANO",
+    description: "Completa e temperada",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Frango", "Milho", "Queijo", "Orégano"]
+  },
+  {
+    id: 52,
+    name: "QUEIJO, FRANGO, E ORÉGANO",
+    description: "Clássica temperada",
+    price: 15.00,
+    category: 'crepioca',
+    ingredients: ["Queijo", "Frango", "Orégano"]
+  },
+
+  // Tapioca Simples
+  {
+    id: 53,
+    name: "MASSA",
+    description: "Tapioca simples",
+    price: 3.00,
+    category: 'tapioca-simples',
+    ingredients: ["Massa de tapioca"]
+  },
+  {
+    id: 54,
+    name: "MANTEIGA DE GADO",
+    description: "Com manteiga",
+    price: 5.50,
+    category: 'tapioca-simples',
+    ingredients: ["Massa", "Manteiga de gado"]
+  },
+  {
+    id: 55,
+    name: "CÔCO",
+    description: "Com côco",
+    price: 5.50,
+    category: 'tapioca-simples',
+    ingredients: ["Massa", "Côco"]
+  },
+  {
+    id: 56,
+    name: "OVO",
+    description: "Com ovo",
+    price: 6.00,
+    category: 'tapioca-simples',
+    ingredients: ["Massa", "Ovo"]
+  },
+  {
+    id: 57,
+    name: "QUEIJO COALHO OU MUSSARELA",
+    description: "Com queijo",
+    price: 12.00,
+    category: 'tapioca-simples',
+    ingredients: ["Massa", "Queijo coalho ou mussarela"]
+  },
+  {
+    id: 58,
+    name: "CARNE DE SOL",
+    description: "Com carne de sol",
+    price: 11.00,
+    category: 'tapioca-simples',
+    ingredients: ["Massa", "Carne de sol"]
+  },
+  {
+    id: 59,
+    name: "FRANGO",
+    description: "Com frango",
+    price: 11.00,
+    category: 'tapioca-simples',
+    ingredients: ["Massa", "Frango"]
+  },
+  {
+    id: 60,
+    name: "CALABRESA",
+    description: "Com calabresa",
+    price: 8.00,
+    category: 'tapioca-simples',
+    ingredients: ["Massa", "Calabresa"]
+  },
+
+  // Tapioca Doces
+  {
+    id: 61,
+    name: "DOÇURA",
+    description: "Café e doce de leite",
+    price: 12.00,
+    category: 'tapioca-doces',
+    ingredients: ["Café", "Doce de leite"]
+  },
+  {
+    id: 62,
+    name: "LUIZA",
+    description: "Leite condensado, côco e queijo",
+    price: 13.00,
+    category: 'tapioca-doces',
+    ingredients: ["Leite condensado", "Côco", "Queijo"]
+  },
+  {
+    id: 63,
+    name: "TERNURA",
+    description: "Pasta de amendoim e nutella",
+    price: 14.00,
+    category: 'tapioca-doces',
+    ingredients: ["Pasta de amendoim", "Nutella"]
+  },
+  {
+    id: 64,
+    name: "DOCINHO",
+    description: "Leite condensado e côco",
+    price: 12.00,
+    category: 'tapioca-doces',
+    ingredients: ["Leite condensado", "Côco"]
+  },
+  {
+    id: 65,
+    name: "FILHO DE MÃE",
+    description: "Brigadeiro",
+    price: 12.00,
+    category: 'tapioca-doces',
+    ingredients: ["Brigadeiro"]
+  },
+  {
+    id: 66,
+    name: "MORENINHA",
+    description: "Brigadeiro e morango",
+    price: 14.00,
+    category: 'tapioca-doces',
+    ingredients: ["Brigadeiro", "Morango"]
+  },
+  {
+    id: 67,
+    name: "PITÉU",
+    description: "Nutella",
+    price: 13.00,
+    category: 'tapioca-doces',
+    ingredients: ["Nutella"]
+  },
+  {
+    id: 68,
+    name: "DELICADA",
+    description: "Nutella e morango",
+    price: 15.00,
+    category: 'tapioca-doces',
+    ingredients: ["Nutella", "Morango"]
+  },
+  {
+    id: 69,
+    name: "ROMEU E JULIETA",
+    description: "Goiabada e queijo",
+    price: 12.00,
+    category: 'tapioca-doces',
+    ingredients: ["Goiabada", "Queijo"]
+  },
+
+  // Lanches
+  {
+    id: 70,
+    name: "COXINHA",
+    description: "Frango e frango catupiry",
+    price: 7.00,
+    category: 'lanches',
+    ingredients: ["Frango", "Frango catupiry"]
+  },
+  {
+    id: 71,
+    name: "MINI COXINHA NO COPO",
+    description: "Mini coxinhas",
+    price: 9.00,
+    category: 'lanches',
+    ingredients: ["Mini coxinhas"]
+  },
+  {
+    id: 72,
+    name: "BAURU",
+    description: "Misto e frango com queijo",
+    price: 7.00,
+    category: 'lanches',
+    ingredients: ["Misto", "Frango", "Queijo"]
+  },
+  {
+    id: 73,
+    name: "CACHORRO QUENTE",
+    description: "Molho de carne, salsicha, vinagrete, batata e queijo ralado",
+    price: 8.00,
+    category: 'lanches',
+    ingredients: ["Molho de carne", "Salsicha", "Vinagrete", "Batata", "Queijo ralado"]
+  },
+  {
+    id: 74,
+    name: "CACHORRO QUENTE",
+    description: "Molho de frango, salsicha, vinagrete, batata e queijo ralado",
+    price: 8.00,
+    category: 'lanches',
+    ingredients: ["Molho de frango", "Salsicha", "Vinagrete", "Batata", "Queijo ralado"]
+  },
+  {
+    id: 75,
+    name: "EMPADA",
+    description: "Empada tradicional",
+    price: 4.50,
+    category: 'lanches',
+    ingredients: ["Recheio tradicional"]
+  },
+  {
+    id: 76,
+    name: "ENROLADINHO",
+    description: "Enroladinho de salsicha",
+    price: 7.00,
+    category: 'lanches',
+    ingredients: ["Salsicha", "Massa"]
+  },
+  {
+    id: 77,
+    name: "BOLO",
+    description: "Fatia de bolo",
+    price: 6.00,
+    category: 'lanches',
+    ingredients: ["Bolo caseiro"]
+  },
+  {
+    id: 78,
+    name: "CALDO DE MACAXEIRA",
+    description: "Caldo quente",
+    price: 11.00,
+    category: 'lanches',
+    ingredients: ["Macaxeira", "Temperos"]
+  },
+  {
+    id: 79,
+    name: "MACAXEIRA COM CARNE DE SOL",
+    description: "Prato completo",
+    price: 22.00,
+    category: 'lanches',
+    ingredients: ["Macaxeira", "Carne de sol"]
+  },
+  {
+    id: 80,
+    name: "MACAXEIRA COM OVO",
+    description: "Prato simples",
+    price: 13.00,
+    category: 'lanches',
+    ingredients: ["Macaxeira", "Ovo"]
+  },
+  {
+    id: 81,
+    name: "CUSCUZ COM CARNE DE SOL",
+    description: "Prato nordestino",
+    price: 22.00,
+    category: 'lanches',
+    ingredients: ["Cuscuz", "Carne de sol"]
+  },
+  {
+    id: 82,
+    name: "CUSCUZ COM OVO",
+    description: "Café da manhã",
+    price: 13.00,
+    category: 'lanches',
+    ingredients: ["Cuscuz", "Ovo"]
+  },
+  {
+    id: 83,
+    name: "MACARRÃO À BOLONHESA",
+    description: "Macarrão com molho",
+    price: 12.00,
+    category: 'lanches',
+    ingredients: ["Macarrão", "Molho bolonhesa"]
   },
 
   // Bebidas
   {
-    id: 40,
-    name: "REFRIGERANTE LATA",
-    description: "Coca-Cola, Guaraná, Fanta",
-    price: 4.00,
-    category: 'bebidas',
-    ingredients: ["refrigerante gelado"],
-    image: "/images/refrigerante-lata.jpg"
-  },
-  {
-    id: 41,
-    name: "REFRIGERANTE 600ML",
-    description: "Coca-Cola, Guaraná, Fanta",
-    price: 6.00,
-    category: 'bebidas',
-    ingredients: ["refrigerante gelado"],
-    image: "/images/refrigerante-600ml.jpg"
-  },
-  {
-    id: 42,
-    name: "ÁGUA MINERAL",
-    description: "Água mineral gelada 500ml",
+    id: 84,
+    name: "CAFÉ",
+    description: "Café tradicional",
     price: 2.50,
     category: 'bebidas',
-    ingredients: ["água mineral"],
-    image: "/images/agua-mineral.jpg"
+    ingredients: ["Café"]
   },
   {
-    id: 43,
-    name: "SUCO NATURAL",
-    description: "Laranja, Acerola, Cajá, Maracujá",
-    price: 8.00,
+    id: 85,
+    name: "CAFÉ COM LEITE",
+    description: "Café com leite",
+    price: 2.50,
     category: 'bebidas',
-    ingredients: ["fruta natural", "açúcar", "gelo"],
-    image: "/images/suco-natural.jpg"
+    ingredients: ["Café", "Leite"]
   },
   {
-    id: 44,
-    name: "VITAMINA",
-    description: "Banana, Mamão, Abacate com leite",
-    price: 10.00,
+    id: 86,
+    name: "ÁGUA MINERAL",
+    description: "Água mineral",
+    price: 2.50,
     category: 'bebidas',
-    ingredients: ["fruta", "leite", "açúcar"],
-    image: "/images/vitamina.jpg"
+    ingredients: ["Água mineral"]
   },
   {
-    id: 45,
-    name: "CAFÉ",
-    description: "Café passado na hora",
+    id: 87,
+    name: "ÁGUA COM GÁS",
+    description: "Água com gás",
     price: 3.00,
     category: 'bebidas',
-    ingredients: ["café", "açúcar"],
-    image: "/images/cafe.jpg"
+    ingredients: ["Água com gás"]
   },
   {
-    id: 46,
-    name: "ÁGUA DE COCO",
-    description: "Água de coco natural gelada",
-    price: 5.00,
+    id: 88,
+    name: "REFRIGERANTE 1L",
+    description: "Coca-cola, Guaraná e Fanta",
+    price: 10.00,
     category: 'bebidas',
-    ingredients: ["água de coco natural"],
-    image: "/images/agua-coco.jpg"
+    ingredients: ["Refrigerante 1L"]
+  },
+  {
+    id: 89,
+    name: "REFRIGERANTE 250 ML",
+    description: "Refrigerante pequeno",
+    price: 3.50,
+    category: 'bebidas',
+    ingredients: ["Refrigerante 250ml"]
+  },
+  {
+    id: 90,
+    name: "REFRIGERANTE LATA 350ML",
+    description: "Coca-cola, Guaraná e Fanta",
+    price: 6.00,
+    category: 'bebidas',
+    ingredients: ["Refrigerante lata"]
+  },
+  {
+    id: 91,
+    name: "COCA ZERO LATA",
+    description: "Coca zero",
+    price: 6.00,
+    category: 'bebidas',
+    ingredients: ["Coca zero"]
+  },
+  {
+    id: 92,
+    name: "SUCO / COPO",
+    description: "Suco natural",
+    price: 6.00,
+    category: 'bebidas',
+    ingredients: ["Frutas naturais"]
+  },
+  {
+    id: 93,
+    name: "SUCO / JARRA",
+    description: "Suco natural jarra",
+    price: 10.00,
+    category: 'bebidas',
+    ingredients: ["Frutas naturais"]
   }
 ];
 
-export const menuCategories: MenuCategory[] = [
-  {
-    id: 'tapioca-3-4',
-    name: 'Tapioca 3 e 4 sabores',
-    description: 'Queijo coalho ou mussarela (salada opcional)',
-    items: menuItems.filter(item => item.category === 'tapioca-3-4')
-  },
-  {
-    id: 'tapioca-2',
-    name: 'Tapioca 2 sabores',
-    description: 'Queijo coalho ou mussarela (salada opcional)',
-    items: menuItems.filter(item => item.category === 'tapioca-2')
-  },
-  {
-    id: 'bebidas',
-    name: 'Bebidas',
-    description: 'Refrescantes e saborosas para acompanhar sua tapioca',
-    items: menuItems.filter(item => item.category === 'bebidas')
-  }
-]; 
+export const categories = [
+  { id: 'tapioca-3-4', name: 'Tapioca 3 e 4 sabores', icon: '🌮' },
+  { id: 'tapioca-2', name: 'Tapioca 2 sabores', icon: '🥙' },
+  { id: 'crepioca', name: 'Crepioca', icon: '🥞' },
+  { id: 'tapioca-simples', name: 'Tapioca Simples', icon: '🫓' },
+  { id: 'tapioca-doces', name: 'Tapioca Doces', icon: '🍰' },
+  { id: 'lanches', name: 'Lanches', icon: '🍔' },
+  { id: 'bebidas', name: 'Bebidas', icon: '🥤' }
+];
+
+export const restaurantInfo = {
+  name: "Tapioca Recheada de Chapa",
+  phone: "75 98847-5658",
+  instagram: "@tapiocarecheadadechapa",
+  pix: "75988475658 - Silvana dos Santos Silva"
+};

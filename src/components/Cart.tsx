@@ -136,7 +136,7 @@ export const Cart: React.FC = () => {
                 
                 <div className="text-xs text-gray-500 text-center">
                   <p>📱 Você será redirecionado para o WhatsApp</p>
-                  <p>💳 Pagamento via PIX: {restaurantInfo.pixKey}</p>
+                  <p>💳 Pagamento via PIX: {restaurantInfo.pix}</p>
                 </div>
               </div>
             )}

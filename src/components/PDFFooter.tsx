@@ -75,8 +75,7 @@ export const PDFFooter: React.FC = () => {
               <p className="text-lg">📱 {restaurantInfo.instagram}</p>
               <div className="bg-white/20 rounded-lg p-3 mt-4">
                 <p className="font-bold">💳 PAGAMENTO VIA PIX</p>
-                <p className="text-sm">Chave: {restaurantInfo.pixKey}</p>
-                <p className="text-sm">Nome: {restaurantInfo.pixName}</p>
+                              <p className="text-sm">{restaurantInfo.pix}</p>
               </div>
             </div>
           </div>

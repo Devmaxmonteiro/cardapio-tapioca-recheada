@@ -4,7 +4,7 @@ export interface MenuItem {
   description: string;
   price: number;
   image?: string;
-  category: 'tapioca-3-4' | 'tapioca-2' | 'bebidas';
+  category: 'tapioca-3-4' | 'tapioca-2' | 'crepioca' | 'tapioca-simples' | 'tapioca-doces' | 'lanches' | 'bebidas';
   ingredients: string[];
   isSpecial?: boolean;
 }
@@ -28,6 +28,5 @@ export interface RestaurantInfo {
   name: string;
   phone: string;
   instagram: string;
-  pixKey: string;
-  pixName: string;
+  pix: string;
 } 
