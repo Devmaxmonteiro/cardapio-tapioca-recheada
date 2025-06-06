@@ -544,26 +544,16 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className="border-t pt-4">
-                  <div className="flex justify-between">
-                    <span>Subtotal:</span>
-                    <span>R$ {state.subtotal.toFixed(2)}</span>
-                  </div>
-                  {state.deliveryFee > 0 && (
-                    <div className="flex justify-between">
-                      <span>Taxa de entrega:</span>
-                      <span>R$ {state.deliveryFee.toFixed(2)}</span>
-                    </div>
-                  )}
-                  {state.discount > 0 && (
-                    <div className="flex justify-between text-green-600">
-                      <span>Desconto:</span>
-                      <span>-R$ {state.discount.toFixed(2)}</span>
-                    </div>
-                  )}
-                  <div className="flex justify-between font-bold text-lg border-t pt-2">
-                    <span>Total:</span>
+                  <div className="flex justify-between font-bold text-xl text-primary-600">
+                    <span>Total (com entrega):</span>
                     <span>R$ {state.total.toFixed(2)}</span>
                   </div>
+                  {state.deliveryFee > 0 && (
+                    <div className="flex justify-between text-sm text-gray-600 mt-1">
+                      <span>Taxa de entrega: R$ {state.deliveryFee.toFixed(2)}</span>
+                      <span>Tempo: {state.delivery?.estimatedTime || 0} min</span>
+                    </div>
+                  )}
                 </div>
               </div>
 

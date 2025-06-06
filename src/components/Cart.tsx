@@ -182,29 +182,17 @@ export const Cart: React.FC = () => {
               <div className="border-t bg-white p-4 space-y-4 flex-shrink-0 shadow-lg">
                 {/* Resumo dos Valores */}
                 <div className="space-y-2 bg-gray-50 p-3 rounded-lg">
-                  <div className="flex justify-between">
-                    <span>Subtotal:</span>
-                    <span className="font-medium">{formatPrice(state.subtotal)}</span>
+                  <div className="flex justify-between items-center text-xl font-bold text-orange-600">
+                    <span>Total com Entrega:</span>
+                    <span>{formatPrice(state.total)}</span>
                   </div>
                   
                   {state.deliveryFee > 0 && (
-                    <div className="flex justify-between text-sm text-gray-600">
-                      <span>Taxa de entrega:</span>
-                      <span>{formatPrice(state.deliveryFee)}</span>
+                    <div className="flex justify-between text-sm text-gray-600 border-t pt-2">
+                      <span>📦 Taxa de entrega: {formatPrice(state.deliveryFee)}</span>
+                      <span>⏰ {state.delivery?.estimatedTime || 0} min</span>
                     </div>
                   )}
-                  
-                  {state.discount > 0 && (
-                    <div className="flex justify-between text-sm text-green-600">
-                      <span>Desconto:</span>
-                      <span>-{formatPrice(state.discount)}</span>
-                    </div>
-                  )}
-                  
-                  <div className="flex justify-between items-center text-xl font-bold border-t pt-2 text-orange-600">
-                    <span>Total:</span>
-                    <span>{formatPrice(state.total)}</span>
-                  </div>
                 </div>
                 
                 {/* Botões de Ação */}

@@ -148,7 +148,7 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
         ...state,
         delivery: action.payload,
         deliveryFee: action.payload.fee,
-        total: state.subtotal + action.payload.fee - state.discount
+        total: state.subtotal + action.payload.fee
       };
 
     case 'SET_PROMOTIONS':
