@@ -1,21 +1,21 @@
 <svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background wood texture exactly matching the second image -->
+  <!-- Background wood texture exactly matching the user's final image -->
   <defs>
     <!-- Wood pattern with vertical planks -->
-    <pattern id="woodPattern" patternUnits="userSpaceOnUse" width="60" height="300">
-      <rect width="60" height="300" fill="#E6A532"/>
+    <pattern id="woodTexture" patternUnits="userSpaceOnUse" width="70" height="300">
+      <rect width="70" height="300" fill="#E6A532"/>
       <!-- Vertical wood planks -->
-      <rect x="0" y="0" width="5" height="300" fill="#B8860B"/>
-      <rect x="55" y="0" width="5" height="300" fill="#B8860B"/>
+      <rect x="0" y="0" width="6" height="300" fill="#B8860B"/>
+      <rect x="64" y="0" width="6" height="300" fill="#B8860B"/>
       <!-- Wood grain -->
-      <rect x="27" y="0" width="3" height="300" fill="#CD853F" opacity="0.4"/>
+      <rect x="32" y="0" width="4" height="300" fill="#CD853F" opacity="0.4"/>
       <!-- Wood knots -->
-      <ellipse cx="30" cy="120" rx="12" ry="25" fill="#A0522D" opacity="0.3"/>
-      <ellipse cx="30" cy="240" rx="10" ry="20" fill="#A0522D" opacity="0.25"/>
+      <ellipse cx="35" cy="130" rx="15" ry="30" fill="#A0522D" opacity="0.3"/>
+      <ellipse cx="35" cy="250" rx="12" ry="24" fill="#A0522D" opacity="0.25"/>
     </pattern>
     
     <!-- Background gradient -->
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="woodGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#F4A460"/>
       <stop offset="25%" style="stop-color:#E6A532"/>
       <stop offset="50%" style="stop-color:#DAA520"/>
@@ -25,52 +25,50 @@
   </defs>
   
   <!-- Wood background -->
-  <rect width="800" height="300" fill="url(#bgGradient)"/>
-  <rect width="800" height="300" fill="url(#woodPattern)" opacity="0.5"/>
+  <rect width="800" height="300" fill="url(#woodGradient)"/>
+  <rect width="800" height="300" fill="url(#woodTexture)" opacity="0.6"/>
   
   <!-- Vertical wood planks -->
-  <g stroke="#8B4513" stroke-width="8" opacity="0.7">
-    <line x1="60" y1="0" x2="60" y2="300"/>
-    <line x1="120" y1="0" x2="120" y2="300"/>
-    <line x1="180" y1="0" x2="180" y2="300"/>
-    <line x1="240" y1="0" x2="240" y2="300"/>
-    <line x1="300" y1="0" x2="300" y2="300"/>
-    <line x1="360" y1="0" x2="360" y2="300"/>
+  <g stroke="#8B4513" stroke-width="10" opacity="0.7">
+    <line x1="70" y1="0" x2="70" y2="300"/>
+    <line x1="140" y1="0" x2="140" y2="300"/>
+    <line x1="210" y1="0" x2="210" y2="300"/>
+    <line x1="280" y1="0" x2="280" y2="300"/>
+    <line x1="350" y1="0" x2="350" y2="300"/>
     <line x1="420" y1="0" x2="420" y2="300"/>
-    <line x1="480" y1="0" x2="480" y2="300"/>
-    <line x1="540" y1="0" x2="540" y2="300"/>
-    <line x1="600" y1="0" x2="600" y2="300"/>
-    <line x1="660" y1="0" x2="660" y2="300"/>
-    <line x1="720" y1="0" x2="720" y2="300"/>
+    <line x1="490" y1="0" x2="490" y2="300"/>
+    <line x1="560" y1="0" x2="560" y2="300"/>
+    <line x1="630" y1="0" x2="630" y2="300"/>
+    <line x1="700" y1="0" x2="700" y2="300"/>
   </g>
   
-  <!-- White circle positioned like in the second image -->
-  <circle cx="300" cy="70" r="50" fill="white" stroke="#8B4513" stroke-width="6"/>
+  <!-- White circle positioned exactly like in the user's image -->
+  <circle cx="320" cy="75" r="55" fill="white" stroke="#8B4513" stroke-width="7"/>
   
   <!-- Three stars HORIZONTALLY aligned inside the circle -->
   <g fill="#8B4513">
     <!-- Left star -->
-    <polygon points="270,65 275,75 285,75 278,82 281,92 270,87 259,92 262,82 255,75 265,75"/>
+    <polygon points="285,70 290,82 303,82 294,90 297,102 285,96 273,102 276,90 267,82 280,82"/>
     <!-- Center star -->
-    <polygon points="300,65 305,75 315,75 308,82 311,92 300,87 289,92 292,82 285,75 295,75"/>
+    <polygon points="320,70 325,82 338,82 329,90 332,102 320,96 308,102 311,90 302,82 315,82"/>
     <!-- Right star -->
-    <polygon points="330,65 335,75 345,75 338,82 341,92 330,87 319,92 322,82 315,75 325,75"/>
+    <polygon points="355,70 360,82 373,82 364,90 367,102 355,96 343,102 346,90 337,82 350,82"/>
   </g>
   
-  <!-- Tapioca semicircle/chapéu - exactly like the second image with scalloped edge -->
-  <path d="M 380 45 Q 440 55 435 95 Q 430 105 380 95 Z" fill="white" stroke="#8B4513" stroke-width="6"/>
+  <!-- Tapioca semicircle/chapéu - exactly like the user's image with scalloped edge -->
+  <path d="M 405 50 Q 475 60 470 105 Q 465 120 405 110 Z" fill="white" stroke="#8B4513" stroke-width="7"/>
   <!-- Scalloped edge detail on the tapioca -->
-  <path d="M 380 45 Q 385 40 395 45 Q 405 50 415 45 Q 425 40 435 45" fill="none" stroke="#8B4513" stroke-width="4"/>
+  <path d="M 405 50 Q 412 44 422 50 Q 432 56 442 50 Q 452 44 462 50 Q 470 56 470 60" fill="none" stroke="#8B4513" stroke-width="5"/>
   
-  <!-- TAPIOCA text - large and bold exactly like the second image -->
-  <text x="400" y="160" font-family="Arial Black, sans-serif" font-size="80" font-weight="900" text-anchor="middle" fill="#8B4513" letter-spacing="4px">TAPIOCA</text>
+  <!-- TAPIOCA text - large and bold exactly like the user's image -->
+  <text x="400" y="175" font-family="Arial Black, sans-serif" font-size="85" font-weight="900" text-anchor="middle" fill="#8B4513" letter-spacing="5px">TAPIOCA</text>
   
-  <!-- Recheada text with brown shadow exactly like the second image -->
+  <!-- Recheada text with brown shadow exactly like the user's image -->
   <!-- Brown shadow for 3D effect -->
-  <text x="403" y="213" font-family="Brush Script MT, cursive" font-size="45" font-weight="bold" text-anchor="middle" fill="#8B4513" font-style="italic" letter-spacing="3px">Recheada</text>
+  <text x="405" y="225" font-family="Brush Script MT, cursive" font-size="48" font-weight="bold" text-anchor="middle" fill="#8B4513" font-style="italic" letter-spacing="2px">Recheada</text>
   <!-- Yellow text on top -->
-  <text x="400" y="210" font-family="Brush Script MT, cursive" font-size="45" font-weight="bold" text-anchor="middle" fill="#FFFF00" font-style="italic" letter-spacing="3px">Recheada</text>
+  <text x="400" y="220" font-family="Brush Script MT, cursive" font-size="48" font-weight="bold" text-anchor="middle" fill="#FFFF00" font-style="italic" letter-spacing="2px">Recheada</text>
   
   <!-- DE CHAPA text -->
-  <text x="400" y="250" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="#8B4513" letter-spacing="8px">DE CHAPA</text>
+  <text x="400" y="265" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#8B4513" letter-spacing="10px">DE CHAPA</text>
 </svg> 
