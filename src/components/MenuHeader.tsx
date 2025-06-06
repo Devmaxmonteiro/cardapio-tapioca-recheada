@@ -15,10 +15,10 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ restaurantInfo }) => {
       {/* Logo Section - Full Width */}
       <div className="w-full">
         <Image
-          src={`/images/tapioca-logo-final.svg?cache=${timestamp}`}
+          src={`/images/file.jpg?cache=${timestamp}`}
           alt="Logo Tapioca Recheada de Chapa"
           width={800}
-          height={300}
+          height={400}
           className="w-full h-auto"
           priority
           unoptimized
