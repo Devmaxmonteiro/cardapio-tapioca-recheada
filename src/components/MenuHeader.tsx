@@ -8,7 +8,7 @@ interface MenuHeaderProps {
 }
 
 export const MenuHeader: React.FC<MenuHeaderProps> = ({ restaurantInfo }) => {
-  const timestamp = new Date().getTime();
+  const timestamp = Date.now() + Math.random();
   
   return (
     <div className="text-white">
