@@ -9,6 +9,7 @@ export const menuItems: MenuItem[] = [
     price: 15.00,
     category: 'tapioca-3-4',
     ingredients: ["Queijo", "Côco", "Manteiga"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca+Delicia",
     isPopular: true,
     rating: 4.8,
     totalReviews: 127,
@@ -20,7 +21,12 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, ovo e frango",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Ovo", "Frango"]
+    ingredients: ["Queijo", "Ovo", "Frango"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca+Pe+de+Sogra",
+    isPopular: true,
+    rating: 4.6,
+    totalReviews: 156,
+    preparationTime: 10
   },
   {
     id: 3,
@@ -29,6 +35,7 @@ export const menuItems: MenuItem[] = [
     price: 16.00,
     category: 'tapioca-3-4',
     ingredients: ["Queijo", "Ovo", "Carne de sol", "Cream cheese"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca+Racudo",
     isSpecial: true,
     rating: 4.9,
     totalReviews: 98,
@@ -40,7 +47,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, ovo e carne de sol",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Ovo", "Carne de sol"]
+    ingredients: ["Queijo", "Ovo", "Carne de sol"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca+Sertaneja"
   },
   {
     id: 5,
@@ -48,7 +56,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, ovo, calabresa e cream cheese",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Ovo", "Calabresa", "Cream cheese"]
+    ingredients: ["Queijo", "Ovo", "Calabresa", "Cream cheese"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 6,
@@ -56,7 +65,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, ovo e calabresa",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Ovo", "Calabresa"]
+    ingredients: ["Queijo", "Ovo", "Calabresa"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
   {
     id: 7,
@@ -64,7 +74,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, carne de sol, frango e cream cheese",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Carne de sol", "Frango", "Cream cheese"]
+    ingredients: ["Queijo", "Carne de sol", "Frango", "Cream cheese"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 8,
@@ -72,7 +83,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, frango e carne de sol",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Frango", "Carne de sol"]
+    ingredients: ["Queijo", "Frango", "Carne de sol"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca"
   },
   {
     id: 9,
@@ -80,7 +92,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, carne de sol, frango e ovo",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Carne de sol", "Frango", "Ovo"]
+    ingredients: ["Queijo", "Carne de sol", "Frango", "Ovo"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 10,
@@ -88,7 +101,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, frango e calabresa",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Frango", "Calabresa"]
+    ingredients: ["Queijo", "Frango", "Calabresa"],
+    image: "https://via.placeholder.com/400x300/B8860B/FFFFFF?text=Tapioca"
   },
   {
     id: 11,
@@ -96,7 +110,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, frango e catupiry",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Frango", "Catupiry"]
+    ingredients: ["Queijo", "Frango", "Catupiry"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca"
   },
   {
     id: 12,
@@ -104,7 +119,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, frango e milho",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Frango", "Milho"]
+    ingredients: ["Queijo", "Frango", "Milho"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   },
   {
     id: 13,
@@ -112,7 +128,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, frango, milho e cream cheese",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Frango", "Milho", "Cream cheese"]
+    ingredients: ["Queijo", "Frango", "Milho", "Cream cheese"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 14,
@@ -120,7 +137,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, carne de sol e catupiry",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Carne de sol", "Catupiry"]
+    ingredients: ["Queijo", "Carne de sol", "Catupiry"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
   {
     id: 15,
@@ -128,7 +146,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, bacon, frango e cream cheese",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Bacon", "Frango", "Cream cheese"]
+    ingredients: ["Queijo", "Bacon", "Frango", "Cream cheese"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 16,
@@ -136,7 +155,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, milho, frango e bacon",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Milho", "Frango", "Bacon"]
+    ingredients: ["Queijo", "Milho", "Frango", "Bacon"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca"
   },
   {
     id: 17,
@@ -144,7 +164,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, bacon e frango",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Bacon", "Frango"]
+    ingredients: ["Queijo", "Bacon", "Frango"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 18,
@@ -152,7 +173,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, carne de sol e bacon",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Carne de sol", "Bacon"]
+    ingredients: ["Queijo", "Carne de sol", "Bacon"],
+    image: "https://via.placeholder.com/400x300/B8860B/FFFFFF?text=Tapioca"
   },
   {
     id: 19,
@@ -160,7 +182,12 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, presunto, tomate, cebola e orégano",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Presunto", "Tomate", "Cebola", "Orégano"]
+    ingredients: ["Queijo", "Presunto", "Tomate", "Cebola", "Orégano"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca",
+    isNew: true,
+    rating: 4.7,
+    totalReviews: 45,
+    preparationTime: 12
   },
   {
     id: 20,
@@ -168,7 +195,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, carne de sol e banana terra caramelizada na manteiga",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Carne de sol", "Banana terra caramelizada"]
+    ingredients: ["Queijo", "Carne de sol", "Banana terra caramelizada"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   },
   {
     id: 21,
@@ -176,7 +204,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, purê de macaxeira e carne de sol",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Purê de macaxeira", "Carne de sol"]
+    ingredients: ["Queijo", "Purê de macaxeira", "Carne de sol"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 22,
@@ -184,7 +213,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, purê de macaxeira e frango",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Purê de macaxeira", "Frango"]
+    ingredients: ["Queijo", "Purê de macaxeira", "Frango"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
   {
     id: 23,
@@ -192,7 +222,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, purê de macaxeira, carne de sol e banana terra",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Purê de macaxeira", "Carne de sol", "Banana terra"]
+    ingredients: ["Queijo", "Purê de macaxeira", "Carne de sol", "Banana terra"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 24,
@@ -202,6 +233,7 @@ export const menuItems: MenuItem[] = [
     originalPrice: 22.00,
     category: 'tapioca-3-4',
     ingredients: ["Até 7 sabores à escolha"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca+Tudao",
     discount: 14,
     isPopular: true,
     rating: 4.7,
@@ -214,7 +246,8 @@ export const menuItems: MenuItem[] = [
     description: "Monte sua tapioca",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["Ingredientes à escolha"]
+    ingredients: ["Ingredientes à escolha"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca"
   },
 
   // Tapioca 2 sabores
@@ -224,7 +257,8 @@ export const menuItems: MenuItem[] = [
     description: "Manteiga e côco",
     price: 9.00,
     category: 'tapioca-2',
-    ingredients: ["Manteiga", "Côco"]
+    ingredients: ["Manteiga", "Côco"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 27,
@@ -232,7 +266,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e côco",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Queijo", "Côco"]
+    ingredients: ["Queijo", "Côco"],
+    image: "https://via.placeholder.com/400x300/B8860B/FFFFFF?text=Tapioca"
   },
   {
     id: 28,
@@ -240,7 +275,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e ovo",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Queijo", "Ovo"]
+    ingredients: ["Queijo", "Ovo"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca"
   },
   {
     id: 29,
@@ -248,7 +284,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e presunto",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Queijo", "Presunto"]
+    ingredients: ["Queijo", "Presunto"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   },
   {
     id: 30,
@@ -256,7 +293,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e frango",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Queijo", "Frango"]
+    ingredients: ["Queijo", "Frango"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 31,
@@ -264,7 +302,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e carne de sol",
     price: 14.00,
     category: 'tapioca-2',
-    ingredients: ["Queijo", "Carne de sol"]
+    ingredients: ["Queijo", "Carne de sol"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
   {
     id: 32,
@@ -272,7 +311,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e calabresa",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Queijo", "Calabresa"]
+    ingredients: ["Queijo", "Calabresa"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 33,
@@ -280,7 +320,8 @@ export const menuItems: MenuItem[] = [
     description: "Queijo e bacon",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Queijo", "Bacon"]
+    ingredients: ["Queijo", "Bacon"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca"
   },
   {
     id: 34,
@@ -288,7 +329,8 @@ export const menuItems: MenuItem[] = [
     description: "Carne de sol e frango",
     price: 14.00,
     category: 'tapioca-2',
-    ingredients: ["Carne de sol", "Frango"]
+    ingredients: ["Carne de sol", "Frango"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 35,
@@ -296,7 +338,8 @@ export const menuItems: MenuItem[] = [
     description: "Carne de sol e catupiry",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Carne de sol", "Catupiry"]
+    ingredients: ["Carne de sol", "Catupiry"],
+    image: "https://via.placeholder.com/400x300/B8860B/FFFFFF?text=Tapioca"
   },
   {
     id: 36,
@@ -304,7 +347,8 @@ export const menuItems: MenuItem[] = [
     description: "Frango e catupiry",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Frango", "Catupiry"]
+    ingredients: ["Frango", "Catupiry"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca"
   },
   {
     id: 37,
@@ -312,7 +356,8 @@ export const menuItems: MenuItem[] = [
     description: "Frango e ovo",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Frango", "Ovo"]
+    ingredients: ["Frango", "Ovo"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   },
   {
     id: 38,
@@ -320,7 +365,8 @@ export const menuItems: MenuItem[] = [
     description: "Bacon e carne",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Bacon", "Carne"]
+    ingredients: ["Bacon", "Carne"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 39,
@@ -328,7 +374,8 @@ export const menuItems: MenuItem[] = [
     description: "Frango e cream cheese",
     price: 13.00,
     category: 'tapioca-2',
-    ingredients: ["Frango", "Cream cheese"]
+    ingredients: ["Frango", "Cream cheese"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
 
   // Crepioca
@@ -338,7 +385,8 @@ export const menuItems: MenuItem[] = [
     description: "Opção saudável",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Peito de peru", "Queijo coalho", "Tomate"]
+    ingredients: ["Peito de peru", "Queijo coalho", "Tomate"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 41,
@@ -346,7 +394,8 @@ export const menuItems: MenuItem[] = [
     description: "Doce especial",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Banana da terra caramelizada", "Mel", "Canela"]
+    ingredients: ["Banana da terra caramelizada", "Mel", "Canela"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca"
   },
   {
     id: 42,
@@ -354,7 +403,8 @@ export const menuItems: MenuItem[] = [
     description: "Combinação perfeita",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Banana da terra caramelizada", "Pasta de amendoim"]
+    ingredients: ["Banana da terra caramelizada", "Pasta de amendoim"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 43,
@@ -362,7 +412,8 @@ export const menuItems: MenuItem[] = [
     description: "Opção fitness",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Frango", "Abacate", "Azeite"]
+    ingredients: ["Frango", "Abacate", "Azeite"],
+    image: "https://via.placeholder.com/400x300/B8860B/FFFFFF?text=Tapioca"
   },
   {
     id: 44,
@@ -370,7 +421,8 @@ export const menuItems: MenuItem[] = [
     description: "Nutritiva e saborosa",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Frango", "Abacate", "Queijo"]
+    ingredients: ["Frango", "Abacate", "Queijo"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca"
   },
   {
     id: 45,
@@ -378,7 +430,8 @@ export const menuItems: MenuItem[] = [
     description: "Rica em proteína",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Peito de peru", "Frango"]
+    ingredients: ["Peito de peru", "Frango"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   },
   {
     id: 46,
@@ -386,7 +439,8 @@ export const menuItems: MenuItem[] = [
     description: "Completa e nutritiva",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Peito de peru", "Frango", "Queijo"]
+    ingredients: ["Peito de peru", "Frango", "Queijo"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 47,
@@ -394,7 +448,8 @@ export const menuItems: MenuItem[] = [
     description: "Doce e salgado",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Queijo", "Côco", "Mel"]
+    ingredients: ["Queijo", "Côco", "Mel"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
   {
     id: 48,
@@ -402,7 +457,8 @@ export const menuItems: MenuItem[] = [
     description: "Frutada e doce",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Queijo", "Morango", "Mel"]
+    ingredients: ["Queijo", "Morango", "Mel"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 49,
@@ -410,7 +466,8 @@ export const menuItems: MenuItem[] = [
     description: "Saudável e saborosa",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Peito de peru", "Queijo", "Milho"]
+    ingredients: ["Peito de peru", "Queijo", "Milho"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca"
   },
   {
     id: 50,
@@ -418,7 +475,8 @@ export const menuItems: MenuItem[] = [
     description: "Temperada especial",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Frango", "Milho", "Orégano"]
+    ingredients: ["Frango", "Milho", "Orégano"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 51,
@@ -426,7 +484,8 @@ export const menuItems: MenuItem[] = [
     description: "Completa e temperada",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Frango", "Milho", "Queijo", "Orégano"]
+    ingredients: ["Frango", "Milho", "Queijo", "Orégano"],
+    image: "https://via.placeholder.com/400x300/B8860B/FFFFFF?text=Tapioca"
   },
   {
     id: 52,
@@ -434,7 +493,8 @@ export const menuItems: MenuItem[] = [
     description: "Clássica temperada",
     price: 15.00,
     category: 'crepioca',
-    ingredients: ["Queijo", "Frango", "Orégano"]
+    ingredients: ["Queijo", "Frango", "Orégano"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca"
   },
 
   // Tapioca Simples
@@ -444,7 +504,8 @@ export const menuItems: MenuItem[] = [
     description: "Tapioca simples",
     price: 3.00,
     category: 'tapioca-simples',
-    ingredients: ["Massa de tapioca"]
+    ingredients: ["Massa de tapioca"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   },
   {
     id: 54,
@@ -452,7 +513,8 @@ export const menuItems: MenuItem[] = [
     description: "Com manteiga",
     price: 5.50,
     category: 'tapioca-simples',
-    ingredients: ["Massa", "Manteiga de gado"]
+    ingredients: ["Massa", "Manteiga de gado"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 55,
@@ -460,7 +522,8 @@ export const menuItems: MenuItem[] = [
     description: "Com côco",
     price: 5.50,
     category: 'tapioca-simples',
-    ingredients: ["Massa", "Côco"]
+    ingredients: ["Massa", "Côco"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
   {
     id: 56,
@@ -468,15 +531,23 @@ export const menuItems: MenuItem[] = [
     description: "Com ovo",
     price: 6.00,
     category: 'tapioca-simples',
-    ingredients: ["Massa", "Ovo"]
+    ingredients: ["Massa", "Ovo"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 57,
     name: "QUEIJO COALHO OU MUSSARELA",
     description: "Com queijo",
     price: 12.00,
+    originalPrice: 14.00,
     category: 'tapioca-simples',
-    ingredients: ["Massa", "Queijo coalho ou mussarela"]
+    ingredients: ["Massa", "Queijo coalho ou mussarela"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca",
+    discount: 14,
+    isPopular: true,
+    rating: 4.8,
+    totalReviews: 234,
+    preparationTime: 5
   },
   {
     id: 58,
@@ -484,7 +555,8 @@ export const menuItems: MenuItem[] = [
     description: "Com carne de sol",
     price: 11.00,
     category: 'tapioca-simples',
-    ingredients: ["Massa", "Carne de sol"]
+    ingredients: ["Massa", "Carne de sol"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 59,
@@ -492,7 +564,8 @@ export const menuItems: MenuItem[] = [
     description: "Com frango",
     price: 11.00,
     category: 'tapioca-simples',
-    ingredients: ["Massa", "Frango"]
+    ingredients: ["Massa", "Frango"],
+    image: "https://via.placeholder.com/400x300/B8860B/FFFFFF?text=Tapioca"
   },
   {
     id: 60,
@@ -500,7 +573,8 @@ export const menuItems: MenuItem[] = [
     description: "Com calabresa",
     price: 8.00,
     category: 'tapioca-simples',
-    ingredients: ["Massa", "Calabresa"]
+    ingredients: ["Massa", "Calabresa"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca"
   },
 
   // Tapioca Doces
@@ -510,7 +584,8 @@ export const menuItems: MenuItem[] = [
     description: "Café e doce de leite",
     price: 12.00,
     category: 'tapioca-doces',
-    ingredients: ["Café", "Doce de leite"]
+    ingredients: ["Café", "Doce de leite"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   },
   {
     id: 62,
@@ -518,7 +593,8 @@ export const menuItems: MenuItem[] = [
     description: "Leite condensado, côco e queijo",
     price: 13.00,
     category: 'tapioca-doces',
-    ingredients: ["Leite condensado", "Côco", "Queijo"]
+    ingredients: ["Leite condensado", "Côco", "Queijo"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 63,
@@ -526,7 +602,8 @@ export const menuItems: MenuItem[] = [
     description: "Pasta de amendoim e nutella",
     price: 14.00,
     category: 'tapioca-doces',
-    ingredients: ["Pasta de amendoim", "Nutella"]
+    ingredients: ["Pasta de amendoim", "Nutella"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
   {
     id: 64,
@@ -534,7 +611,8 @@ export const menuItems: MenuItem[] = [
     description: "Leite condensado e côco",
     price: 12.00,
     category: 'tapioca-doces',
-    ingredients: ["Leite condensado", "Côco"]
+    ingredients: ["Leite condensado", "Côco"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 65,
@@ -542,7 +620,8 @@ export const menuItems: MenuItem[] = [
     description: "Brigadeiro",
     price: 12.00,
     category: 'tapioca-doces',
-    ingredients: ["Brigadeiro"]
+    ingredients: ["Brigadeiro"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca"
   },
   {
     id: 66,
@@ -550,7 +629,8 @@ export const menuItems: MenuItem[] = [
     description: "Brigadeiro e morango",
     price: 14.00,
     category: 'tapioca-doces',
-    ingredients: ["Brigadeiro", "Morango"]
+    ingredients: ["Brigadeiro", "Morango"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 67,
@@ -558,7 +638,8 @@ export const menuItems: MenuItem[] = [
     description: "Nutella",
     price: 13.00,
     category: 'tapioca-doces',
-    ingredients: ["Nutella"]
+    ingredients: ["Nutella"],
+    image: "https://via.placeholder.com/400x300/B8860B/FFFFFF?text=Tapioca"
   },
   {
     id: 68,
@@ -566,7 +647,8 @@ export const menuItems: MenuItem[] = [
     description: "Nutella e morango",
     price: 15.00,
     category: 'tapioca-doces',
-    ingredients: ["Nutella", "Morango"]
+    ingredients: ["Nutella", "Morango"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca"
   },
   {
     id: 69,
@@ -574,7 +656,8 @@ export const menuItems: MenuItem[] = [
     description: "Goiabada e queijo",
     price: 12.00,
     category: 'tapioca-doces',
-    ingredients: ["Goiabada", "Queijo"]
+    ingredients: ["Goiabada", "Queijo"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   },
 
   // Lanches
@@ -584,7 +667,8 @@ export const menuItems: MenuItem[] = [
     description: "Frango e frango catupiry",
     price: 7.00,
     category: 'lanches',
-    ingredients: ["Frango", "Frango catupiry"]
+    ingredients: ["Frango", "Frango catupiry"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 71,
@@ -592,7 +676,8 @@ export const menuItems: MenuItem[] = [
     description: "Mini coxinhas",
     price: 9.00,
     category: 'lanches',
-    ingredients: ["Mini coxinhas"]
+    ingredients: ["Mini coxinhas"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
   {
     id: 72,
@@ -600,7 +685,8 @@ export const menuItems: MenuItem[] = [
     description: "Misto e frango com queijo",
     price: 7.00,
     category: 'lanches',
-    ingredients: ["Misto", "Frango", "Queijo"]
+    ingredients: ["Misto", "Frango", "Queijo"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 73,
@@ -608,7 +694,8 @@ export const menuItems: MenuItem[] = [
     description: "Molho de carne, salsicha, vinagrete, batata e queijo ralado",
     price: 8.00,
     category: 'lanches',
-    ingredients: ["Molho de carne", "Salsicha", "Vinagrete", "Batata", "Queijo ralado"]
+    ingredients: ["Molho de carne", "Salsicha", "Vinagrete", "Batata", "Queijo ralado"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca"
   },
   {
     id: 74,
@@ -616,7 +703,8 @@ export const menuItems: MenuItem[] = [
     description: "Molho de frango, salsicha, vinagrete, batata e queijo ralado",
     price: 8.00,
     category: 'lanches',
-    ingredients: ["Molho de frango", "Salsicha", "Vinagrete", "Batata", "Queijo ralado"]
+    ingredients: ["Molho de frango", "Salsicha", "Vinagrete", "Batata", "Queijo ralado"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 75,
@@ -624,7 +712,8 @@ export const menuItems: MenuItem[] = [
     description: "Empada tradicional",
     price: 4.50,
     category: 'lanches',
-    ingredients: ["Recheio tradicional"]
+    ingredients: ["Recheio tradicional"],
+    image: "https://via.placeholder.com/400x300/B8860B/FFFFFF?text=Tapioca"
   },
   {
     id: 76,
@@ -632,7 +721,8 @@ export const menuItems: MenuItem[] = [
     description: "Enroladinho de salsicha",
     price: 7.00,
     category: 'lanches',
-    ingredients: ["Salsicha", "Massa"]
+    ingredients: ["Salsicha", "Massa"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca"
   },
   {
     id: 77,
@@ -640,7 +730,8 @@ export const menuItems: MenuItem[] = [
     description: "Fatia de bolo",
     price: 6.00,
     category: 'lanches',
-    ingredients: ["Bolo caseiro"]
+    ingredients: ["Bolo caseiro"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   },
   {
     id: 78,
@@ -648,7 +739,8 @@ export const menuItems: MenuItem[] = [
     description: "Caldo quente",
     price: 11.00,
     category: 'lanches',
-    ingredients: ["Macaxeira", "Temperos"]
+    ingredients: ["Macaxeira", "Temperos"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 79,
@@ -656,7 +748,8 @@ export const menuItems: MenuItem[] = [
     description: "Prato completo",
     price: 22.00,
     category: 'lanches',
-    ingredients: ["Macaxeira", "Carne de sol"]
+    ingredients: ["Macaxeira", "Carne de sol"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
   {
     id: 80,
@@ -664,7 +757,8 @@ export const menuItems: MenuItem[] = [
     description: "Prato simples",
     price: 13.00,
     category: 'lanches',
-    ingredients: ["Macaxeira", "Ovo"]
+    ingredients: ["Macaxeira", "Ovo"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 81,
@@ -672,7 +766,8 @@ export const menuItems: MenuItem[] = [
     description: "Prato nordestino",
     price: 22.00,
     category: 'lanches',
-    ingredients: ["Cuscuz", "Carne de sol"]
+    ingredients: ["Cuscuz", "Carne de sol"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca"
   },
   {
     id: 82,
@@ -680,7 +775,8 @@ export const menuItems: MenuItem[] = [
     description: "Café da manhã",
     price: 13.00,
     category: 'lanches',
-    ingredients: ["Cuscuz", "Ovo"]
+    ingredients: ["Cuscuz", "Ovo"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 83,
@@ -688,7 +784,8 @@ export const menuItems: MenuItem[] = [
     description: "Macarrão com molho",
     price: 12.00,
     category: 'lanches',
-    ingredients: ["Macarrão", "Molho bolonhesa"]
+    ingredients: ["Macarrão", "Molho bolonhesa"],
+    image: "https://via.placeholder.com/400x300/B8860B/FFFFFF?text=Tapioca"
   },
 
   // Bebidas
@@ -698,7 +795,8 @@ export const menuItems: MenuItem[] = [
     description: "Café tradicional",
     price: 2.50,
     category: 'bebidas',
-    ingredients: ["Café"]
+    ingredients: ["Café"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca"
   },
   {
     id: 85,
@@ -706,7 +804,8 @@ export const menuItems: MenuItem[] = [
     description: "Café com leite",
     price: 2.50,
     category: 'bebidas',
-    ingredients: ["Café", "Leite"]
+    ingredients: ["Café", "Leite"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   },
   {
     id: 86,
@@ -714,7 +813,8 @@ export const menuItems: MenuItem[] = [
     description: "Água mineral",
     price: 2.50,
     category: 'bebidas',
-    ingredients: ["Água mineral"]
+    ingredients: ["Água mineral"],
+    image: "https://via.placeholder.com/400x300/D2691E/FFFFFF?text=Tapioca"
   },
   {
     id: 87,
@@ -722,7 +822,8 @@ export const menuItems: MenuItem[] = [
     description: "Água com gás",
     price: 3.00,
     category: 'bebidas',
-    ingredients: ["Água com gás"]
+    ingredients: ["Água com gás"],
+    image: "https://via.placeholder.com/400x300/CD853F/FFFFFF?text=Tapioca"
   },
   {
     id: 88,
@@ -730,7 +831,8 @@ export const menuItems: MenuItem[] = [
     description: "Coca-cola, Guaraná e Fanta",
     price: 10.00,
     category: 'bebidas',
-    ingredients: ["Refrigerante 1L"]
+    ingredients: ["Refrigerante 1L"],
+    image: "https://via.placeholder.com/400x300/DEB887/FFFFFF?text=Tapioca"
   },
   {
     id: 89,
@@ -738,7 +840,8 @@ export const menuItems: MenuItem[] = [
     description: "Refrigerante pequeno",
     price: 3.50,
     category: 'bebidas',
-    ingredients: ["Refrigerante 250ml"]
+    ingredients: ["Refrigerante 250ml"],
+    image: "https://via.placeholder.com/400x300/F4A460/FFFFFF?text=Tapioca"
   },
   {
     id: 90,
@@ -746,7 +849,8 @@ export const menuItems: MenuItem[] = [
     description: "Coca-cola, Guaraná e Fanta",
     price: 6.00,
     category: 'bebidas',
-    ingredients: ["Refrigerante lata"]
+    ingredients: ["Refrigerante lata"],
+    image: "https://via.placeholder.com/400x300/DAA520/FFFFFF?text=Tapioca"
   },
   {
     id: 91,
@@ -754,7 +858,8 @@ export const menuItems: MenuItem[] = [
     description: "Coca zero",
     price: 6.00,
     category: 'bebidas',
-    ingredients: ["Coca zero"]
+    ingredients: ["Coca zero"],
+    image: "https://fakeimg.pl/400x300/DC143C/FFFFFF?text=Coca%20Zero&font=lobster"
   },
   {
     id: 92,
@@ -762,7 +867,8 @@ export const menuItems: MenuItem[] = [
     description: "Suco natural",
     price: 6.00,
     category: 'bebidas',
-    ingredients: ["Frutas naturais"]
+    ingredients: ["Frutas naturais"],
+    image: "https://via.placeholder.com/400x300/BC8F8F/FFFFFF?text=Tapioca"
   },
   {
     id: 93,
@@ -770,7 +876,8 @@ export const menuItems: MenuItem[] = [
     description: "Suco natural jarra",
     price: 10.00,
     category: 'bebidas',
-    ingredients: ["Frutas naturais"]
+    ingredients: ["Frutas naturais"],
+    image: "https://via.placeholder.com/400x300/F5DEB3/FFFFFF?text=Tapioca"
   }
 ];
 
@@ -786,7 +893,10 @@ export const categories = [
 
 export const restaurantInfo = {
   name: "Tapioca Recheada de Chapa",
+  location: "Paulo Afonso - BA",
   phone: "75 98847-5658",
   instagram: "@tapiocarecheadadechapa",
-  pix: "75988475658 - Silvana dos Santos Silva"
+  pix: "75988475658 - Silvana dos Santos Silva",
+  address: "Paulo Afonso, Bahia",
+  deliveryArea: "Entregamos em toda Paulo Afonso!"
 };

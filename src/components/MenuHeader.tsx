@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Instagram } from 'lucide-react';
+import { Phone, Instagram, MapPin } from 'lucide-react';
 import { RestaurantInfo } from '@/types/menu';
 import Image from 'next/image';
 
@@ -39,6 +39,19 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ restaurantInfo }) => {
           <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 font-display leading-tight">
             {restaurantInfo.name}
           </h1>
+          
+          {/* Location */}
+          <div className="flex items-center justify-center space-x-2 mb-4 text-yellow-200">
+            <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
+            <span className="text-sm sm:text-base lg:text-lg font-medium">
+              {(restaurantInfo as any).location || 'Paulo Afonso - BA'}
+            </span>
+          </div>
+          
+          {/* Delivery Area Badge */}
+          <div className="bg-green-500 text-white px-4 py-2 rounded-full inline-block mb-4 text-sm font-semibold">
+            🚚 {(restaurantInfo as any).deliveryArea || 'Entregamos em toda Paulo Afonso!'}
+          </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 lg:space-x-8 text-sm sm:text-base lg:text-lg">
             <div className="flex items-center space-x-2">
