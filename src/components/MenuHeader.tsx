@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, Instagram } from 'lucide-react';
 import { RestaurantInfo } from '@/types/menu';
+import Image from 'next/image';
 
 interface MenuHeaderProps {
   restaurantInfo: RestaurantInfo;
@@ -10,6 +11,20 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ restaurantInfo }) => {
   return (
     <div className="bg-gradient-to-r from-primary-600 to-primary-800 text-white p-4 sm:p-6 lg:p-8 text-center">
       <div className="max-w-4xl mx-auto">
+        {/* Logo da Tapioca */}
+        <div className="flex justify-center mb-4 sm:mb-6">
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4">
+            <Image
+              src="/images/logo-tapioca.svg"
+              alt="Logo Tapioca Recheada de Chapa"
+              width={160}
+              height={96}
+              className="w-32 h-auto sm:w-40 lg:w-48"
+              priority
+            />
+          </div>
+        </div>
+
         <div className="flex items-center justify-center mb-3 sm:mb-4">
           <div className="flex space-x-1 text-yellow-300 text-lg sm:text-xl lg:text-2xl">
             <span>★</span>

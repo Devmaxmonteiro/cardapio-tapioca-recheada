@@ -1,0 +1,35 @@
+<svg width="200" height="120" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background wood texture -->
+  <defs>
+    <pattern id="wood" patternUnits="userSpaceOnUse" width="20" height="120">
+      <rect width="20" height="120" fill="#D2691E"/>
+      <rect x="0" y="0" width="1" height="120" fill="#8B4513"/>
+      <rect x="19" y="0" width="1" height="120" fill="#8B4513"/>
+    </pattern>
+  </defs>
+  
+  <!-- Wood background -->
+  <rect width="200" height="120" fill="url(#wood)"/>
+  
+  <!-- White circle background for logo -->
+  <circle cx="100" cy="35" r="25" fill="white" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- Stars in the circle -->
+  <g fill="#8B4513">
+    <polygon points="85,30 87,36 93,36 88,40 90,46 85,42 80,46 82,40 77,36 83,36" />
+    <polygon points="100,25 102,31 108,31 103,35 105,41 100,37 95,41 97,35 92,31 98,31" />
+    <polygon points="115,30 117,36 123,36 118,40 120,46 115,42 110,46 112,40 107,36 113,36" />
+  </g>
+  
+  <!-- Tapioca shape -->
+  <path d="M 130 20 Q 170 25 165 45 Q 160 50 130 45 Z" fill="white" stroke="#8B4513" stroke-width="2"/>
+  
+  <!-- TAPIOCA text -->
+  <text x="100" y="75" font-family="Arial Black, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#8B4513">TAPIOCA</text>
+  
+  <!-- Recheada text -->
+  <text x="100" y="95" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#32CD32" font-style="italic">Recheada</text>
+  
+  <!-- DE CHAPA text -->
+  <text x="100" y="110" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#8B4513">DE CHAPA</text>
+</svg> 
