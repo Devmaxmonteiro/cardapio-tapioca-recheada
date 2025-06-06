@@ -13,12 +13,13 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ restaurantInfo }) => {
       {/* Logo Section - Full Width */}
       <div className="w-full">
         <Image
-          src="/images/logo-tapioca.svg"
+          src={`/images/logo-tapioca-v2.svg?v=${Date.now()}`}
           alt="Logo Tapioca Recheada de Chapa"
           width={800}
           height={400}
           className="w-full h-auto"
           priority
+          unoptimized
         />
       </div>
 
