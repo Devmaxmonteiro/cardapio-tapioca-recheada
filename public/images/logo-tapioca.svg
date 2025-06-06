@@ -1,52 +1,64 @@
-<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background wood texture with golden/yellow tone -->
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background wood texture with golden/orange tone -->
   <defs>
-    <pattern id="wood" patternUnits="userSpaceOnUse" width="30" height="200">
-      <rect width="30" height="200" fill="#DAA520"/>
-      <rect x="0" y="0" width="2" height="200" fill="#B8860B"/>
-      <rect x="28" y="0" width="2" height="200" fill="#B8860B"/>
-      <rect x="14" y="0" width="2" height="200" fill="#CD853F"/>
+    <!-- Wood grain pattern -->
+    <pattern id="woodGrain" patternUnits="userSpaceOnUse" width="40" height="300">
+      <rect width="40" height="300" fill="#E6A532"/>
+      <rect x="0" y="0" width="3" height="300" fill="#B8860B"/>
+      <rect x="37" y="0" width="3" height="300" fill="#B8860B"/>
+      <rect x="19" y="0" width="2" height="300" fill="#CD853F"/>
+      <!-- Wood knots -->
+      <ellipse cx="20" cy="80" rx="8" ry="15" fill="#A0522D" opacity="0.6"/>
+      <ellipse cx="20" cy="220" rx="6" ry="12" fill="#A0522D" opacity="0.5"/>
     </pattern>
     
-    <!-- Gradient for wood effect -->
-    <linearGradient id="woodGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Main wood gradient -->
+    <linearGradient id="woodBackground" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#F4A460;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#E6A532;stop-opacity:1" />
       <stop offset="50%" style="stop-color:#DAA520;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#E6A532;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CD853F;stop-opacity:1" />
     </linearGradient>
   </defs>
   
-  <!-- Wood background with gradient -->
-  <rect width="400" height="200" fill="url(#woodGradient)"/>
-  <rect width="400" height="200" fill="url(#wood)" opacity="0.3"/>
+  <!-- Wood background -->
+  <rect width="800" height="300" fill="url(#woodBackground)"/>
+  <rect width="800" height="300" fill="url(#woodGrain)" opacity="0.4"/>
   
-  <!-- Wood planks lines -->
-  <g stroke="#8B4513" stroke-width="3" opacity="0.6">
-    <line x1="80" y1="0" x2="80" y2="200"/>
-    <line x1="160" y1="0" x2="160" y2="200"/>
-    <line x1="240" y1="0" x2="240" y2="200"/>
-    <line x1="320" y1="0" x2="320" y2="200"/>
+  <!-- Vertical wood planks -->
+  <g stroke="#8B4513" stroke-width="4" opacity="0.7">
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="400" y1="0" x2="400" y2="300"/>
+    <line x1="500" y1="0" x2="500" y2="300"/>
+    <line x1="600" y1="0" x2="600" y2="300"/>
+    <line x1="700" y1="0" x2="700" y2="300"/>
   </g>
   
-  <!-- White circle background for logo -->
-  <circle cx="200" cy="70" r="45" fill="white" stroke="#8B4513" stroke-width="3"/>
+  <!-- White circle background for stars and tapioca -->
+  <circle cx="400" cy="80" r="55" fill="white" stroke="#8B4513" stroke-width="4"/>
   
-  <!-- Stars in the circle -->
+  <!-- Three stars in the circle -->
   <g fill="#8B4513">
-    <polygon points="170,65 173,72 180,72 175,77 177,84 170,80 163,84 165,77 160,72 167,72" />
-    <polygon points="200,55 203,62 210,62 205,67 207,74 200,70 193,74 195,67 190,62 197,62" />
-    <polygon points="230,65 233,72 240,72 235,77 237,84 230,80 223,84 225,77 220,72 227,72" />
+    <!-- Left star -->
+    <polygon points="360,75 364,85 375,85 367,92 370,102 360,96 350,102 353,92 345,85 356,85" />
+    <!-- Center star (bigger) -->
+    <polygon points="400,65 405,78 420,78 409,87 413,100 400,93 387,100 391,87 380,78 395,78" />
+    <!-- Right star -->
+    <polygon points="440,75 444,85 455,85 447,92 450,102 440,96 430,102 433,92 425,85 436,85" />
   </g>
   
-  <!-- Tapioca shape (half circle) -->
-  <path d="M 260 50 Q 320 60 310 90 Q 300 100 260 90 Z" fill="white" stroke="#8B4513" stroke-width="3"/>
+  <!-- Tapioca shape (half circle/semicircle) -->
+  <path d="M 480 60 Q 550 70 540 110 Q 530 120 480 110 Z" fill="white" stroke="#8B4513" stroke-width="4"/>
   
-  <!-- TAPIOCA text -->
-  <text x="200" y="140" font-family="Arial Black, sans-serif" font-size="42" font-weight="bold" text-anchor="middle" fill="#8B4513">TAPIOCA</text>
+  <!-- TAPIOCA text - large and bold -->
+  <text x="400" y="180" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" text-anchor="middle" fill="#8B4513" letter-spacing="2px">TAPIOCA</text>
   
-  <!-- Recheada text -->
-  <text x="200" y="165" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#32CD32" font-style="italic">Recheada</text>
+  <!-- Recheada text - green and italic -->
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#32CD32" font-style="italic" letter-spacing="1px">Recheada</text>
   
   <!-- DE CHAPA text -->
-  <text x="200" y="185" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#8B4513">DE CHAPA</text>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#8B4513" letter-spacing="3px">DE CHAPA</text>
 </svg> 

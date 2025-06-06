@@ -11,17 +11,15 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ restaurantInfo }) => {
   return (
     <div className="text-white">
       {/* Logo Section - Full Width */}
-      <div className="bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 w-full">
-        <div className="flex justify-center py-4 sm:py-6">
-          <Image
-            src="/images/logo-tapioca.svg"
-            alt="Logo Tapioca Recheada de Chapa"
-            width={400}
-            height={200}
-            className="w-full max-w-md sm:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto"
-            priority
-          />
-        </div>
+      <div className="w-full">
+        <Image
+          src="/images/logo-tapioca.svg"
+          alt="Logo Tapioca Recheada de Chapa"
+          width={800}
+          height={300}
+          className="w-full h-auto"
+          priority
+        />
       </div>
 
       {/* Restaurant Info Section */}
