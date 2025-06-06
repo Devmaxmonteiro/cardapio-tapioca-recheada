@@ -16,7 +16,7 @@ export const DeliveryZoneInfo: React.FC = () => {
         <div className="flex items-center space-x-2">
           <Truck className="w-5 h-5 text-green-600" />
           <h3 className="font-semibold text-green-800">
-            🚚 Entrega a partir de Moxotó para Paulo Afonso
+            🚚 Entrega a partir de Moxotó
           </h3>
         </div>
         {isExpanded ? (
@@ -27,7 +27,7 @@ export const DeliveryZoneInfo: React.FC = () => {
       </div>
       
       <div className="mt-2 text-sm text-green-700 font-medium">
-        ✅ Valores fixos por bairro - Sempre entregamos!
+        ✅ Valores específicos por bairro - Sempre entregamos!
       </div>
 
       {isExpanded && (
@@ -73,13 +73,13 @@ export const DeliveryZoneInfo: React.FC = () => {
           <div className="bg-green-50 border border-green-200 rounded-lg p-3 mt-4">
             <div className="flex items-center space-x-2 text-green-800">
               <MapPin className="w-4 h-4" />
-              <span className="font-semibold">🎯 Localização:</span>
+              <span className="font-semibold">🎯 Informações:</span>
             </div>
             <p className="text-sm text-green-700 mt-1 font-medium">
-              Saindo de Moxotó, Paulo Afonso - BA
+              📍 Saindo de Moxotó, Paulo Afonso - BA
             </p>
             <p className="text-xs text-green-600 mt-1">
-              Valores fixos por destino - Sem promoções de desconto nos produtos
+              💡 Endereços não listados: R$ 5,00 (mesmo valor do bairro da lanchonete)
             </p>
           </div>
         </div>

@@ -77,22 +77,6 @@ export const deliveryZones: DeliveryZone[] = [
     isActive: true
   },
   {
-    id: 'zona-paulo-afonso-geral',
-    name: 'Paulo Afonso - Outros Bairros',
-    neighborhoods: [
-      'Paulo Afonso', 'PA', 'paulo afonso', 'PAULO AFONSO',
-      'Bahia', 'BA', 'bahia', 'BAHIA',
-      'Vila Nova', 'Cidade Nova', 'Jardim Primavera', 'Brasília', 'São Vicente',
-      'Alto da Boa Vista', 'Landulfo Alves', 'Oliveira Brito', 'OLIVEIRA BRITO',
-      'Tancredo Neves', 'Portal', 'Parque dos Pássaros', 'Vila Militar',
-      'João XXIII', 'Padre Cicero', 'Bom Jesus', 'Santa Rita',
-      'José Bonifácio', 'Buracão', 'Alto do Cruzeiro', 'Vila Rica'
-    ],
-    fee: 6.00,
-    estimatedTime: 25,
-    isActive: true
-  },
-  {
     id: 'zona-cidades-vizinhas',
     name: 'Cidades Vizinhas',
     neighborhoods: [
@@ -134,7 +118,7 @@ export const calculateDeliveryFee = (neighborhood: string): DeliveryZone => {
     return deliveryZones.find(zone => zone.id === 'zona-moxoto')!;
   }
   
-  // PRIORIDADE 2: Buscar correspondência exata ou parcial nas outras zonas
+  // PRIORIDADE 2: Buscar correspondência exata ou parcial nas zonas específicas
   const exactMatch = deliveryZones.find(zone => 
     zone.isActive && zone.id !== 'zona-moxoto' && zone.neighborhoods.some(n => 
       n.toLowerCase() === searchTerm ||
@@ -145,21 +129,14 @@ export const calculateDeliveryFee = (neighborhood: string): DeliveryZone => {
   
   if (exactMatch) return exactMatch;
   
-  // PRIORIDADE 3: Se contém Paulo Afonso ou BA, usa a zona geral de Paulo Afonso
-  if (searchTerm.includes('paulo') || searchTerm.includes('afonso') || 
-      searchTerm.includes('pa') || searchTerm.includes('bahia') || 
-      searchTerm.includes('ba')) {
-    return deliveryZones.find(zone => zone.id === 'zona-paulo-afonso-geral')!;
-  }
-  
-  // PRIORIDADE 4: Para cidades vizinhas conhecidas
+  // PRIORIDADE 3: Para cidades vizinhas conhecidas
   const cidadesVizinhas = ['gloria', 'chorrocho', 'rodelas', 'belem', 'macurure', 'petrolina', 'juazeiro'];
   if (cidadesVizinhas.some(cidade => searchTerm.includes(cidade))) {
     return deliveryZones.find(zone => zone.id === 'zona-cidades-vizinhas')!;
   }
   
-  // FALLBACK: SEMPRE ENTREGA! Usa zona Paulo Afonso geral como padrão
-  return deliveryZones.find(zone => zone.id === 'zona-paulo-afonso-geral')!;
+  // FALLBACK: SEMPRE ENTREGA! Usa zona do mesmo bairro (R$ 5,00) como padrão
+  return deliveryZones.find(zone => zone.id === 'zona-moxoto')!;
 };
 
 export const getApplicablePromotions = (
