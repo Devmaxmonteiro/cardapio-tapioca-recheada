@@ -10,7 +10,6 @@ import { PDFFooter } from '@/components/PDFFooter';
 import { Cart } from '@/components/Cart';
 import { SearchBar } from '@/components/SearchBar';
 import { FeaturedItems } from '@/components/FeaturedItems';
-import { PromotionBanner } from '@/components/PromotionBanner';
 import { CartProvider } from '@/context/CartContext';
 import { restaurantInfo, menuItems, categories } from '@/data/menu';
 
@@ -65,9 +64,6 @@ export default function Home() {
           
           <main className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 pb-12">
             <OrderInstructions />
-            
-            {/* Banner de Promoções */}
-            <PromotionBanner />
             
             {!searchQuery && (
               <FeaturedItems items={menuItems} />
