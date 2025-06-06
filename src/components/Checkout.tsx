@@ -382,10 +382,20 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
           {/* Payment Step */}
           {state.currentStep === 'payment' && (
             <div className="space-y-6">
-              <h3 className="text-lg font-semibold mb-4 flex items-center">
-                <CreditCard className="w-5 h-5 mr-2" />
-                Forma de Pagamento
-              </h3>
+              <h3 className="text-lg font-semibold mb-4">Forma de Pagamento</h3>
+              
+              {/* Total Display */}
+              <div className="bg-primary-50 border border-primary-200 rounded-lg p-4 mb-6">
+                <div className="flex justify-between items-center text-lg font-bold text-primary-700">
+                  <span>Total a pagar:</span>
+                  <span>R$ {state.total.toFixed(2)}</span>
+                </div>
+                {state.deliveryFee > 0 && (
+                  <div className="text-sm text-primary-600 mt-1">
+                    (Inclui taxa de entrega: R$ {state.deliveryFee.toFixed(2)})
+                  </div>
+                )}
+              </div>
 
               <div className="space-y-4">
                 {/* PIX */}
@@ -400,9 +410,12 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
                       onChange={() => setPaymentForm({ type: 'pix' })}
                       className="text-primary-600"
                     />
-                    <div>
+                    <div className="flex-1">
                       <p className="font-semibold">PIX</p>
                       <p className="text-sm text-gray-600">Pagamento instantâneo</p>
+                      <p className="text-sm font-medium text-primary-600 mt-1">
+                        Total: R$ {state.total.toFixed(2)}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -419,9 +432,12 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
                       onChange={() => setPaymentForm({ type: 'money' })}
                       className="text-primary-600"
                     />
-                    <div>
+                    <div className="flex-1">
                       <p className="font-semibold">Dinheiro</p>
                       <p className="text-sm text-gray-600">Pagamento na entrega</p>
+                      <p className="text-sm font-medium text-primary-600 mt-1">
+                        Total: R$ {state.total.toFixed(2)}
+                      </p>
                     </div>
                   </div>
                   
@@ -438,22 +454,32 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
                           }))}
                           className="text-primary-600"
                         />
-                        <span>Preciso de troco</span>
+                        <span className="text-sm">Preciso de troco</span>
                       </div>
                       
                       {paymentForm.needsChange && (
-                        <input
-                          type="number"
-                          value={paymentForm.changeAmount || ''}
-                          onChange={(e) => setPaymentForm(prev => ({ 
-                            ...prev, 
-                            changeAmount: parseFloat(e.target.value) 
-                          }))}
-                          className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                          placeholder="Valor que você tem"
-                          min={state.total}
-                          step="0.01"
-                        />
+                        <div className="space-y-2">
+                          <label className="text-sm font-medium text-gray-700">
+                            Valor que você tem para pagamento:
+                          </label>
+                          <input
+                            type="number"
+                            value={paymentForm.changeAmount || ''}
+                            onChange={(e) => setPaymentForm(prev => ({ 
+                              ...prev, 
+                              changeAmount: parseFloat(e.target.value) || 0
+                            }))}
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                            placeholder={`Mínimo: R$ ${state.total.toFixed(2)}`}
+                            min={state.total}
+                            step="0.01"
+                          />
+                          {paymentForm.changeAmount && paymentForm.changeAmount > state.total && (
+                            <div className="text-sm text-green-600 font-medium">
+                              Troco: R$ {(paymentForm.changeAmount - state.total).toFixed(2)}
+                            </div>
+                          )}
+                        </div>
                       )}
                     </div>
                   )}
@@ -471,9 +497,12 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
                       onChange={() => setPaymentForm({ type: 'card', cardType: 'credit' })}
                       className="text-primary-600"
                     />
-                    <div>
+                    <div className="flex-1">
                       <p className="font-semibold">Cartão</p>
                       <p className="text-sm text-gray-600">Crédito ou débito na entrega</p>
+                      <p className="text-sm font-medium text-primary-600 mt-1">
+                        Total: R$ {state.total.toFixed(2)}
+                      </p>
                     </div>
                   </div>
                   
