@@ -7,7 +7,8 @@ export const deliveryZones: DeliveryZone[] = [
     neighborhoods: [
       'Centro', 'Centro Histórico', 'Praça da Matriz', 'Rua Principal', 
       'Mercado Central', 'Vila Nova', 'Cidade Nova', 'Jardim Primavera',
-      'Brasília', 'São Vicente', 'Alto da Boa Vista', 'Landulfo Alves'
+      'Brasília', 'São Vicente', 'Alto da Boa Vista', 'Landulfo Alves',
+      'Oliveira Brito', 'OLIVEIRA BRITO', 'oliveira brito'
     ],
     fee: 3.00,
     estimatedTime: 20,
@@ -19,7 +20,8 @@ export const deliveryZones: DeliveryZone[] = [
     neighborhoods: [
       'Tancredo Neves', 'Portal', 'Parque dos Pássaros', 'Vila Militar',
       'Conjunto Habitacional', 'Parque Industrial', 'Loteamento Novo',
-      'Jardim América', 'Vila do Sol', 'Jardim Bahia', 'Santo Antônio'
+      'Jardim América', 'Vila do Sol', 'Jardim Bahia', 'Santo Antônio',
+      'TANCREDO NEVES', 'tancredo neves'
     ],
     fee: 4.00,
     estimatedTime: 25,
@@ -31,7 +33,8 @@ export const deliveryZones: DeliveryZone[] = [
     neighborhoods: [
       'João XXIII', 'Padre Cicero', 'Bom Jesus', 'Santa Rita',
       'São Francisco', 'Conjunto João XXIII', 'Vila União',
-      'Conjunto Morada Nova', 'Jardim Europa', 'Bela Vista'
+      'Conjunto Morada Nova', 'Jardim Europa', 'Bela Vista',
+      'JOÃO XXIII', 'JOAO XXIII', 'joao xxiii', 'joão xxiii'
     ],
     fee: 4.50,
     estimatedTime: 30,
@@ -44,7 +47,8 @@ export const deliveryZones: DeliveryZone[] = [
       'José Bonifácio', 'Buracão', 'Alto do Cruzeiro', 'Vila Rica',
       'Conjunto Morada do Sol', 'Residencial Palmeiras', 'Condomínio Feliz',
       'Loteamento Jardim das Flores', 'Vila Operária', 'Nova Paulo Afonso',
-      'Conjunto Paulo VI', 'Dique', 'General Dutra'
+      'Conjunto Paulo VI', 'Dique', 'General Dutra', 'JOSÉ BONIFÁCIO',
+      'BURACÃO', 'buração', 'jose bonifacio'
     ],
     fee: 5.00,
     estimatedTime: 35,
@@ -56,7 +60,7 @@ export const deliveryZones: DeliveryZone[] = [
     neighborhoods: [
       'Sítios', 'Chácaras', 'Zona Rural', 'Povoados',
       'Distrito de Raso da Catarina', 'Fazendas', 'Assentamentos',
-      'Paulo Afonso Rural', 'Perímetro Rural'
+      'Paulo Afonso Rural', 'Perímetro Rural', 'ZONA RURAL'
     ],
     fee: 8.00,
     estimatedTime: 45,
@@ -119,17 +123,27 @@ export const activePromotions: Promotion[] = [
 export const calculateDeliveryFee = (neighborhood: string): DeliveryZone | null => {
   const searchTerm = neighborhood.toLowerCase().trim();
   
-  return deliveryZones.find(zone => 
+  // Primeiro, tenta encontrar uma correspondência exata ou parcial
+  const exactMatch = deliveryZones.find(zone => 
     zone.isActive && zone.neighborhoods.some(n => 
+      n.toLowerCase() === searchTerm ||
       n.toLowerCase().includes(searchTerm) ||
-      searchTerm.includes(n.toLowerCase()) ||
-      // Busca mais flexível para Paulo Afonso
-      (searchTerm.includes('paulo') && searchTerm.includes('afonso')) ||
-      searchTerm.includes('pa') ||
-      searchTerm.includes('bahia') ||
-      searchTerm.includes('ba')
+      searchTerm.includes(n.toLowerCase())
     )
-  ) || null;
+  );
+  
+  if (exactMatch) return exactMatch;
+  
+  // Se não encontrou, e contém "paulo afonso" ou variações, usa a zona geral
+  if (searchTerm.includes('paulo') || searchTerm.includes('afonso') || 
+      searchTerm.includes('pa') || searchTerm.includes('bahia') || 
+      searchTerm.includes('ba')) {
+    return deliveryZones.find(zone => zone.id === 'zona-geral') || null;
+  }
+  
+  // Como último recurso, para qualquer bairro de Paulo Afonso, usa zona centro
+  // (assumindo que se chegou até aqui, é um bairro válido)
+  return deliveryZones.find(zone => zone.id === 'zona-centro') || null;
 };
 
 export const getApplicablePromotions = (
