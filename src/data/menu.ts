@@ -8,7 +8,11 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, côco e manteiga",
     price: 15.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Côco", "Manteiga"]
+    ingredients: ["Queijo", "Côco", "Manteiga"],
+    isPopular: true,
+    rating: 4.8,
+    totalReviews: 127,
+    preparationTime: 8
   },
   {
     id: 2,
@@ -24,7 +28,11 @@ export const menuItems: MenuItem[] = [
     description: "Queijo, ovo, carne de sol e cream cheese",
     price: 16.00,
     category: 'tapioca-3-4',
-    ingredients: ["Queijo", "Ovo", "Carne de sol", "Cream cheese"]
+    ingredients: ["Queijo", "Ovo", "Carne de sol", "Cream cheese"],
+    isSpecial: true,
+    rating: 4.9,
+    totalReviews: 98,
+    preparationTime: 12
   },
   {
     id: 4,
@@ -191,8 +199,14 @@ export const menuItems: MenuItem[] = [
     name: "TUDÃO",
     description: "Até 7 sabores",
     price: 19.00,
+    originalPrice: 22.00,
     category: 'tapioca-3-4',
-    ingredients: ["Até 7 sabores à escolha"]
+    ingredients: ["Até 7 sabores à escolha"],
+    discount: 14,
+    isPopular: true,
+    rating: 4.7,
+    totalReviews: 205,
+    preparationTime: 15
   },
   {
     id: 25,
@@ -761,13 +775,13 @@ export const menuItems: MenuItem[] = [
 ];
 
 export const categories = [
-  { id: 'tapioca-3-4', name: 'Tapioca 3 e 4 sabores', icon: '🌮' },
-  { id: 'tapioca-2', name: 'Tapioca 2 sabores', icon: '🥙' },
-  { id: 'crepioca', name: 'Crepioca', icon: '🥞' },
-  { id: 'tapioca-simples', name: 'Tapioca Simples', icon: '🫓' },
-  { id: 'tapioca-doces', name: 'Tapioca Doces', icon: '🍰' },
-  { id: 'lanches', name: 'Lanches', icon: '🍔' },
-  { id: 'bebidas', name: 'Bebidas', icon: '🥤' }
+  { id: 'tapioca-3-4', name: 'Tapioca 3 e 4 sabores', icon: '🌮', description: 'As mais completas e saborosas' },
+  { id: 'tapioca-2', name: 'Tapioca 2 sabores', icon: '🥙', description: 'Combinações perfeitas' },
+  { id: 'crepioca', name: 'Crepioca', icon: '🥞', description: 'Fitness e nutritiva' },
+  { id: 'tapioca-simples', name: 'Tapioca Simples', icon: '🫓', description: 'Tradicionais e clássicas' },
+  { id: 'tapioca-doces', name: 'Tapioca Doces', icon: '🍰', description: 'Para adoçar seu dia' },
+  { id: 'lanches', name: 'Lanches', icon: '🍔', description: 'Variedade para todos' },
+  { id: 'bebidas', name: 'Bebidas', icon: '🥤', description: 'Para acompanhar' }
 ];
 
 export const restaurantInfo = {

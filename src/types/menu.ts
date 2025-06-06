@@ -3,10 +3,17 @@ export interface MenuItem {
   name: string;
   description: string;
   price: number;
+  originalPrice?: number; // Para promoções
   image?: string;
   category: 'tapioca-3-4' | 'tapioca-2' | 'crepioca' | 'tapioca-simples' | 'tapioca-doces' | 'lanches' | 'bebidas';
   ingredients: string[];
   isSpecial?: boolean;
+  isPopular?: boolean;
+  isNew?: boolean;
+  rating?: number;
+  totalReviews?: number;
+  preparationTime?: number; // em minutos
+  discount?: number; // porcentagem de desconto
 }
 
 export interface CartItem {

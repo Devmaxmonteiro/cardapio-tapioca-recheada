@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { MenuHeader } from '@/components/MenuHeader';
 import { MenuCategory } from '@/components/MenuCategory';
 import CategoryTabs from '@/components/CategoryTabs';
@@ -8,16 +8,38 @@ import { OrderInstructions } from '@/components/OrderInstructions';
 import { PDFButton } from '@/components/PDFButton';
 import { PDFFooter } from '@/components/PDFFooter';
 import { Cart } from '@/components/Cart';
+import { SearchBar } from '@/components/SearchBar';
+import { FeaturedItems } from '@/components/FeaturedItems';
 import { CartProvider } from '@/context/CartContext';
 import { restaurantInfo, menuItems, categories } from '@/data/menu';
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState('tapioca-3-4');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  // Filtrar itens da categoria ativa
-  const filteredItems = menuItems.filter(item => item.category === activeCategory);
-  
-
+  // Filtrar itens por busca e categoria
+  const filteredItems = useMemo(() => {
+    let items = menuItems;
+    
+    // Filtrar por busca
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      items = items.filter(item => 
+        item.name.toLowerCase().includes(query) ||
+        item.description.toLowerCase().includes(query) ||
+        item.ingredients.some(ingredient => 
+          ingredient.toLowerCase().includes(query)
+        )
+      );
+    }
+    
+    // Filtrar por categoria (se não há busca ativa)
+    if (!searchQuery.trim()) {
+      items = items.filter(item => item.category === activeCategory);
+    }
+    
+    return items;
+  }, [searchQuery, activeCategory]);
   
   // Encontrar informações da categoria ativa
   const currentCategory = categories.find(cat => cat.id === activeCategory);
@@ -28,15 +50,35 @@ export default function Home() {
         <div id="menu-content">
           <MenuHeader restaurantInfo={restaurantInfo} />
           
-          <CategoryTabs 
-            activeCategory={activeCategory}
-            onCategoryChange={setActiveCategory}
+          <SearchBar 
+            onSearch={setSearchQuery}
+            placeholder="Buscar tapiocas, ingredientes..."
           />
+          
+          {!searchQuery && (
+            <CategoryTabs 
+              activeCategory={activeCategory}
+              onCategoryChange={setActiveCategory}
+            />
+          )}
           
           <main className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 pb-12">
             <OrderInstructions />
             
-            {currentCategory && (
+            {!searchQuery && (
+              <FeaturedItems items={menuItems} />
+            )}
+            
+            {searchQuery ? (
+              <MenuCategory 
+                category={{
+                  id: 'search-results',
+                  name: `Resultados para "${searchQuery}"`,
+                  description: `${filteredItems.length} item${filteredItems.length !== 1 ? 'ns' : ''} encontrado${filteredItems.length !== 1 ? 's' : ''}`,
+                  items: filteredItems
+                }}
+              />
+            ) : currentCategory && (
               <MenuCategory 
                 category={{
                   id: currentCategory.id,

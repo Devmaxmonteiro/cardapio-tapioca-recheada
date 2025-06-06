@@ -3,7 +3,7 @@ import { ShoppingCart, MessageCircle, MapPin, CreditCard } from 'lucide-react';
 
 export const OrderInstructions: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg shadow-lg mb-12 no-print">
+    <div className="bg-gradient-to-r from-amber-800 to-amber-900 text-white p-8 rounded-lg shadow-lg mb-12 no-print">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">
           🛒 Como Fazer Seu Pedido Online
