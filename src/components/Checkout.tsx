@@ -21,7 +21,8 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
     nextStep, 
     previousStep, 
     createOrder, 
-    generateDetailedWhatsAppMessage 
+    generateDetailedWhatsAppMessage,
+    clearCart
   } = useCart();
   
   const [customerForm, setCustomerForm] = useState<CustomerData>({
@@ -121,8 +122,19 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
       const whatsappUrl = `https://wa.me/5575988475658?text=${message}`;
       window.open(whatsappUrl, '_blank');
       
-      // Ir para tracking
+      // Ir para tracking primeiro
       nextStep();
+      
+      // Limpar carrinho após 2 segundos para mostrar a tela de sucesso
+      setTimeout(() => {
+        clearCart();
+      }, 2000);
+      
+      // Fechar modal após 4 segundos
+      setTimeout(() => {
+        onClose();
+      }, 4000);
+      
     } catch (error) {
       console.error('Erro ao finalizar pedido:', error);
     }
@@ -666,25 +678,39 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
 
           {/* Tracking Step */}
           {state.currentStep === 'tracking' && (
-            <div className="text-center space-y-6">
-              <div className="text-green-600 text-6xl">✅</div>
-              <h3 className="text-2xl font-bold text-green-600">Pedido Enviado!</h3>
-              <p className="text-gray-600">
-                Seu pedido foi enviado para nosso WhatsApp e logo entraremos em contato para confirmar.
-              </p>
-              {state.delivery && (
-                <p className="text-lg">
-                  ⏰ Tempo estimado: {state.delivery.estimatedTime} minutos
+            <div className="text-center space-y-6 animate-fade-in">
+              <div className="text-green-600 text-6xl animate-bounce">✅</div>
+              <h3 className="text-2xl font-bold text-green-600">Pedido Enviado com Sucesso!</h3>
+              <div className="bg-green-50 p-4 rounded-lg">
+                <p className="text-green-800 font-medium">
+                  🎉 Seu pedido foi enviado para nosso WhatsApp!
                 </p>
+                <p className="text-green-700 text-sm mt-2">
+                  Logo entraremos em contato para confirmar e informar o tempo de entrega.
+                </p>
+              </div>
+              
+              {state.delivery && (
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <p className="text-blue-800 font-medium">
+                    ⏰ Tempo estimado de entrega: {state.delivery.estimatedTime} minutos
+                  </p>
+                </div>
               )}
+              
+              <div className="text-sm text-gray-500">
+                <p>💰 Carrinho será limpo automaticamente</p>
+                <p>⏱️ Modal fechará em poucos segundos</p>
+              </div>
+              
               <button
                 onClick={() => {
+                  clearCart();
                   onClose();
-                  // Reset cart optionally
                 }}
-                className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium"
+                className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-medium transition-all hover:scale-105"
               >
-                Fazer Novo Pedido
+                🛒 Fazer Novo Pedido
               </button>
             </div>
           )}
