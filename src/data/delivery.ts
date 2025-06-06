@@ -2,68 +2,83 @@ import { DeliveryZone, Promotion } from '@/types/menu';
 
 export const deliveryZones: DeliveryZone[] = [
   {
-    id: 'zona-centro',
-    name: 'Centro e Adjacências',
+    id: 'zona-reciclagem',
+    name: 'Reciclagem',
     neighborhoods: [
-      'Centro', 'Centro Histórico', 'Praça da Matriz', 'Rua Principal', 
-      'Mercado Central', 'Vila Nova', 'Cidade Nova', 'Jardim Primavera',
-      'Brasília', 'São Vicente', 'Alto da Boa Vista', 'Landulfo Alves',
-      'Oliveira Brito', 'OLIVEIRA BRITO', 'oliveira brito'
+      'Reciclagem', 'RECICLAGEM', 'reciclagem'
     ],
-    fee: 3.00,
+    fee: 5.00,
+    estimatedTime: 15,
+    isActive: true
+  },
+  {
+    id: 'zona-jardim-bahia',
+    name: 'Jardim Bahia',
+    neighborhoods: [
+      'Jardim Bahia', 'JARDIM BAHIA', 'jardim bahia',
+      'Jardim da Bahia', 'JARDIM DA BAHIA', 'jardim da bahia'
+    ],
+    fee: 7.00,
     estimatedTime: 20,
     isActive: true
   },
   {
-    id: 'zona-tancredo-neves',
-    name: 'Tancredo Neves e Região',
+    id: 'zona-prainha',
+    name: 'Prainha',
     neighborhoods: [
-      'Tancredo Neves', 'Portal', 'Parque dos Pássaros', 'Vila Militar',
-      'Conjunto Habitacional', 'Parque Industrial', 'Loteamento Novo',
-      'Jardim América', 'Vila do Sol', 'Jardim Bahia', 'Santo Antônio',
-      'TANCREDO NEVES', 'tancredo neves'
+      'Prainha', 'PRAINHA', 'prainha'
     ],
-    fee: 4.00,
+    fee: 8.00,
     estimatedTime: 25,
     isActive: true
   },
   {
-    id: 'zona-joao-xxiii',
-    name: 'João XXIII e Arredores',
+    id: 'zona-seriema',
+    name: 'Seriema',
     neighborhoods: [
-      'João XXIII', 'Padre Cicero', 'Bom Jesus', 'Santa Rita',
-      'São Francisco', 'Conjunto João XXIII', 'Vila União',
-      'Conjunto Morada Nova', 'Jardim Europa', 'Bela Vista',
-      'JOÃO XXIII', 'JOAO XXIII', 'joao xxiii', 'joão xxiii'
+      'Seriema', 'SERIEMA', 'seriema'
     ],
-    fee: 4.50,
+    fee: 8.00,
+    estimatedTime: 25,
+    isActive: true
+  },
+  {
+    id: 'zona-centro',
+    name: 'Centro da Cidade',
+    neighborhoods: [
+      'Centro', 'CENTRO', 'centro',
+      'Centro da Cidade', 'CENTRO DA CIDADE', 'centro da cidade',
+      'Centro Histórico', 'centro historico', 'CENTRO HISTÓRICO'
+    ],
+    fee: 9.00,
     estimatedTime: 30,
     isActive: true
   },
   {
-    id: 'zona-expansao',
-    name: 'Zona de Expansão',
+    id: 'zona-balneario',
+    name: 'Balneário',
     neighborhoods: [
-      'José Bonifácio', 'Buracão', 'Alto do Cruzeiro', 'Vila Rica',
-      'Conjunto Morada do Sol', 'Residencial Palmeiras', 'Condomínio Feliz',
-      'Loteamento Jardim das Flores', 'Vila Operária', 'Nova Paulo Afonso',
-      'Conjunto Paulo VI', 'Dique', 'General Dutra', 'JOSÉ BONIFÁCIO',
-      'BURACÃO', 'buracão', 'jose bonifacio'
+      'Balneário', 'BALNEÁRIO', 'balneario', 'BALNEARIO',
+      'balneário'
     ],
-    fee: 5.00,
+    fee: 10.00,
     estimatedTime: 35,
     isActive: true
   },
   {
-    id: 'zona-rural',
-    name: 'Zona Rural e Distritos',
+    id: 'zona-paulo-afonso-geral',
+    name: 'Paulo Afonso - Outros Bairros',
     neighborhoods: [
-      'Sítios', 'Chácaras', 'Zona Rural', 'Povoados',
-      'Distrito de Raso da Catarina', 'Fazendas', 'Assentamentos',
-      'Paulo Afonso Rural', 'Perímetro Rural', 'ZONA RURAL'
+      'Paulo Afonso', 'PA', 'paulo afonso', 'PAULO AFONSO',
+      'Bahia', 'BA', 'bahia', 'BAHIA',
+      'Vila Nova', 'Cidade Nova', 'Jardim Primavera', 'Brasília', 'São Vicente',
+      'Alto da Boa Vista', 'Landulfo Alves', 'Oliveira Brito', 'OLIVEIRA BRITO',
+      'Tancredo Neves', 'Portal', 'Parque dos Pássaros', 'Vila Militar',
+      'João XXIII', 'Padre Cicero', 'Bom Jesus', 'Santa Rita',
+      'José Bonifácio', 'Buracão', 'Alto do Cruzeiro', 'Vila Rica'
     ],
-    fee: 8.00,
-    estimatedTime: 45,
+    fee: 6.00,
+    estimatedTime: 25,
     isActive: true
   },
   {
@@ -81,17 +96,6 @@ export const deliveryZones: DeliveryZone[] = [
     fee: 12.00,
     estimatedTime: 60,
     isActive: true
-  },
-  {
-    id: 'zona-geral-paulo-afonso',
-    name: 'Paulo Afonso - Todo Território',
-    neighborhoods: [
-      'Paulo Afonso', 'PA', 'paulo afonso', 'PAULO AFONSO',
-      'Bahia', 'BA', 'bahia', 'BAHIA'
-    ],
-    fee: 4.00,
-    estimatedTime: 30,
-    isActive: true
   }
 ];
 
@@ -99,41 +103,16 @@ export const activePromotions: Promotion[] = [
   {
     id: 'promo-1',
     name: 'Frete Grátis',
-    description: 'Frete grátis para pedidos acima de R$ 30,00 em Paulo Afonso e região',
+    description: 'Frete grátis para pedidos acima de R$ 50,00 em Paulo Afonso e região',
     type: 'freeDelivery',
     value: 0,
-    minOrderValue: 30.00,
+    minOrderValue: 50.00,
     isActive: true,
     conditions: {
       dayOfWeek: [0, 1, 2, 3, 4, 5, 6] // Todos os dias
     }
-  },
-  {
-    id: 'promo-2',
-    name: 'Desconto 10%',
-    description: '10% de desconto em pedidos acima de R$ 50,00',
-    type: 'percentage',
-    value: 10,
-    minOrderValue: 50.00,
-    validUntil: new Date('2024-12-31'),
-    isActive: true
-  },
-  {
-    id: 'promo-3',
-    name: 'Happy Hour',
-    description: '15% de desconto das 14h às 17h',
-    type: 'percentage',
-    value: 15,
-    minOrderValue: 25.00,
-    isActive: true,
-    conditions: {
-      timeRange: {
-        start: '14:00',
-        end: '17:00'
-      },
-      dayOfWeek: [1, 2, 3, 4, 5] // Segunda a sexta
-    }
   }
+  // Removidas as promoções de desconto percentual
 ];
 
 export const calculateDeliveryFee = (neighborhood: string): DeliveryZone => {
@@ -154,7 +133,7 @@ export const calculateDeliveryFee = (neighborhood: string): DeliveryZone => {
   if (searchTerm.includes('paulo') || searchTerm.includes('afonso') || 
       searchTerm.includes('pa') || searchTerm.includes('bahia') || 
       searchTerm.includes('ba')) {
-    return deliveryZones.find(zone => zone.id === 'zona-geral-paulo-afonso')!;
+    return deliveryZones.find(zone => zone.id === 'zona-paulo-afonso-geral')!;
   }
   
   // Para cidades vizinhas conhecidas
@@ -163,8 +142,8 @@ export const calculateDeliveryFee = (neighborhood: string): DeliveryZone => {
     return deliveryZones.find(zone => zone.id === 'zona-cidades-vizinhas')!;
   }
   
-  // FALLBACK: SEMPRE ENTREGA! Usa zona centro como padrão
-  return deliveryZones.find(zone => zone.id === 'zona-centro')!;
+  // FALLBACK: SEMPRE ENTREGA! Usa zona Paulo Afonso geral como padrão
+  return deliveryZones.find(zone => zone.id === 'zona-paulo-afonso-geral')!;
 };
 
 export const getApplicablePromotions = (

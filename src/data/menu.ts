@@ -893,10 +893,10 @@ export const categories = [
 
 export const restaurantInfo = {
   name: "Tapioca Recheada de Chapa",
-  location: "Paulo Afonso - BA",
+  location: "Moxotó - BA",
   phone: "75 98847-5658",
   instagram: "@tapiocarecheadadechapa",
   pix: "75988475658 - Silvana dos Santos Silva",
-  address: "Paulo Afonso, Bahia",
-  deliveryArea: "Entregamos em toda Paulo Afonso!"
+  address: "Moxotó, Paulo Afonso - Bahia",
+  deliveryArea: "Entregamos para Paulo Afonso e região a partir de Moxotó!"
 };
