@@ -2,6 +2,17 @@ import { DeliveryZone, Promotion } from '@/types/menu';
 
 export const deliveryZones: DeliveryZone[] = [
   {
+    id: 'zona-moxoto',
+    name: 'Moxotó (Mesmo Bairro)',
+    neighborhoods: [
+      'Moxotó', 'MOXOTÓ', 'moxoto', 'MOXOTO', 'moxotó',
+      'Moxoto', 'moxoto bahia', 'MOXOTO BAHIA', 'Moxotó Bahia', 'MOXOTÓ BAHIA'
+    ],
+    fee: 5.00,
+    estimatedTime: 10,
+    isActive: true
+  },
+  {
     id: 'zona-reciclagem',
     name: 'Reciclagem',
     neighborhoods: [
@@ -118,9 +129,14 @@ export const activePromotions: Promotion[] = [
 export const calculateDeliveryFee = (neighborhood: string): DeliveryZone => {
   const searchTerm = neighborhood.toLowerCase().trim();
   
-  // Primeiro, tenta encontrar uma correspondência exata ou parcial
+  // PRIORIDADE 1: Verificar se é Moxotó (mesmo bairro da lanchonete)
+  if (searchTerm.includes('moxoto') || searchTerm.includes('moxotó')) {
+    return deliveryZones.find(zone => zone.id === 'zona-moxoto')!;
+  }
+  
+  // PRIORIDADE 2: Buscar correspondência exata ou parcial nas outras zonas
   const exactMatch = deliveryZones.find(zone => 
-    zone.isActive && zone.neighborhoods.some(n => 
+    zone.isActive && zone.id !== 'zona-moxoto' && zone.neighborhoods.some(n => 
       n.toLowerCase() === searchTerm ||
       n.toLowerCase().includes(searchTerm) ||
       searchTerm.includes(n.toLowerCase())
@@ -129,14 +145,14 @@ export const calculateDeliveryFee = (neighborhood: string): DeliveryZone => {
   
   if (exactMatch) return exactMatch;
   
-  // Se contém Paulo Afonso ou BA, usa a zona geral de Paulo Afonso
+  // PRIORIDADE 3: Se contém Paulo Afonso ou BA, usa a zona geral de Paulo Afonso
   if (searchTerm.includes('paulo') || searchTerm.includes('afonso') || 
       searchTerm.includes('pa') || searchTerm.includes('bahia') || 
       searchTerm.includes('ba')) {
     return deliveryZones.find(zone => zone.id === 'zona-paulo-afonso-geral')!;
   }
   
-  // Para cidades vizinhas conhecidas
+  // PRIORIDADE 4: Para cidades vizinhas conhecidas
   const cidadesVizinhas = ['gloria', 'chorrocho', 'rodelas', 'belem', 'macurure', 'petrolina', 'juazeiro'];
   if (cidadesVizinhas.some(cidade => searchTerm.includes(cidade))) {
     return deliveryZones.find(zone => zone.id === 'zona-cidades-vizinhas')!;
