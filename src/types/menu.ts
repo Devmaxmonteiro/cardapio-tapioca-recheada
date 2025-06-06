@@ -14,6 +14,7 @@ export interface MenuItem {
   totalReviews?: number;
   preparationTime?: number; // em minutos
   discount?: number; // porcentagem de desconto
+  available?: boolean; // Disponibilidade do produto
 }
 
 export interface CartItem {
