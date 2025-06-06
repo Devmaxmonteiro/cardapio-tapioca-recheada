@@ -98,11 +98,9 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
     if (validateCustomerData()) {
       setCustomerData(customerForm);
       
-      // Calcular taxa de entrega - sempre aceita entrega em Paulo Afonso
+      // Calcular taxa de entrega - sempre aceita entrega em Paulo Afonso e região
       const deliveryCalculated = calculateDelivery(customerForm.address.neighborhood);
-      // Com o novo sistema, sempre terá uma zona de entrega
-      setDeliveryError('');
-      
+      // Com o novo sistema, sempre haverá uma zona de entrega válida
       setDeliveryError('');
       nextStep();
     }
@@ -366,11 +364,7 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
                   </div>
                 </div>
                 
-                {deliveryError && (
-                  <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <p className="text-red-700">{deliveryError}</p>
-                  </div>
-                )}
+
               </div>
 
               <div className="flex justify-end">

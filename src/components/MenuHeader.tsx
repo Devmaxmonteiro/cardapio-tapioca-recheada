@@ -50,7 +50,7 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ restaurantInfo }) => {
           
           {/* Delivery Area Badge */}
           <div className="bg-green-500 text-white px-4 py-2 rounded-full inline-block mb-4 text-sm font-semibold">
-            🚚 {(restaurantInfo as any).deliveryArea || 'Entregamos em toda Paulo Afonso!'}
+            🚚 Entregamos em TODO Paulo Afonso-BA e cidades vizinhas!
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-4 lg:space-x-8 text-sm sm:text-base lg:text-lg">

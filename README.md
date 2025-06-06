@@ -72,18 +72,18 @@ src/
 - npm ou yarn
 
 ### Instalação
-```bash
+   ```bash
 # Clone o repositório
 git clone <repository-url>
 
 # Instale as dependências
-npm install
+   npm install
 
 # Execute em modo desenvolvimento
-npm run dev
+   npm run dev
 
 # Acesse http://localhost:3000
-```
+   ```
 
 ### Build para Produção
 ```bash
@@ -173,8 +173,8 @@ Configure no `tailwind.config.js`:
 ```javascript
 theme: {
   extend: {
-    colors: {
-      primary: {
+colors: {
+  primary: {
         500: '#D97706',
         600: '#B45309',
         700: '#92400E'

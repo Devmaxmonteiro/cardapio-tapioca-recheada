@@ -48,7 +48,7 @@ export const deliveryZones: DeliveryZone[] = [
       'Conjunto Morada do Sol', 'Residencial Palmeiras', 'Condomínio Feliz',
       'Loteamento Jardim das Flores', 'Vila Operária', 'Nova Paulo Afonso',
       'Conjunto Paulo VI', 'Dique', 'General Dutra', 'JOSÉ BONIFÁCIO',
-      'BURACÃO', 'buração', 'jose bonifacio'
+      'BURACÃO', 'buracão', 'jose bonifacio'
     ],
     fee: 5.00,
     estimatedTime: 35,
@@ -67,8 +67,24 @@ export const deliveryZones: DeliveryZone[] = [
     isActive: true
   },
   {
-    id: 'zona-geral',
-    name: 'Paulo Afonso - Geral',
+    id: 'zona-cidades-vizinhas',
+    name: 'Cidades Vizinhas',
+    neighborhoods: [
+      'Glória', 'GLÓRIA', 'gloria',
+      'Chorrochó', 'CHORROCHÓ', 'chorrocho',
+      'Rodelas', 'RODELAS', 'rodelas',
+      'Belém do São Francisco', 'BELÉM DO SÃO FRANCISCO', 'belem do sao francisco',
+      'Macururé', 'MACURURÉ', 'macurure',
+      'Petrolina', 'PETROLINA', 'petrolina',
+      'Juazeiro', 'JUAZEIRO', 'juazeiro'
+    ],
+    fee: 12.00,
+    estimatedTime: 60,
+    isActive: true
+  },
+  {
+    id: 'zona-geral-paulo-afonso',
+    name: 'Paulo Afonso - Todo Território',
     neighborhoods: [
       'Paulo Afonso', 'PA', 'paulo afonso', 'PAULO AFONSO',
       'Bahia', 'BA', 'bahia', 'BAHIA'
@@ -83,7 +99,7 @@ export const activePromotions: Promotion[] = [
   {
     id: 'promo-1',
     name: 'Frete Grátis',
-    description: 'Frete grátis para pedidos acima de R$ 30,00 em Paulo Afonso',
+    description: 'Frete grátis para pedidos acima de R$ 30,00 em Paulo Afonso e região',
     type: 'freeDelivery',
     value: 0,
     minOrderValue: 30.00,
@@ -120,7 +136,7 @@ export const activePromotions: Promotion[] = [
   }
 ];
 
-export const calculateDeliveryFee = (neighborhood: string): DeliveryZone | null => {
+export const calculateDeliveryFee = (neighborhood: string): DeliveryZone => {
   const searchTerm = neighborhood.toLowerCase().trim();
   
   // Primeiro, tenta encontrar uma correspondência exata ou parcial
@@ -134,16 +150,21 @@ export const calculateDeliveryFee = (neighborhood: string): DeliveryZone | null 
   
   if (exactMatch) return exactMatch;
   
-  // Se não encontrou, e contém "paulo afonso" ou variações, usa a zona geral
+  // Se contém Paulo Afonso ou BA, usa a zona geral de Paulo Afonso
   if (searchTerm.includes('paulo') || searchTerm.includes('afonso') || 
       searchTerm.includes('pa') || searchTerm.includes('bahia') || 
       searchTerm.includes('ba')) {
-    return deliveryZones.find(zone => zone.id === 'zona-geral') || null;
+    return deliveryZones.find(zone => zone.id === 'zona-geral-paulo-afonso')!;
   }
   
-  // Como último recurso, para qualquer bairro de Paulo Afonso, usa zona centro
-  // (assumindo que se chegou até aqui, é um bairro válido)
-  return deliveryZones.find(zone => zone.id === 'zona-centro') || null;
+  // Para cidades vizinhas conhecidas
+  const cidadesVizinhas = ['gloria', 'chorrocho', 'rodelas', 'belem', 'macurure', 'petrolina', 'juazeiro'];
+  if (cidadesVizinhas.some(cidade => searchTerm.includes(cidade))) {
+    return deliveryZones.find(zone => zone.id === 'zona-cidades-vizinhas')!;
+  }
+  
+  // FALLBACK: SEMPRE ENTREGA! Usa zona centro como padrão
+  return deliveryZones.find(zone => zone.id === 'zona-centro')!;
 };
 
 export const getApplicablePromotions = (
