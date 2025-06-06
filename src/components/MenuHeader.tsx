@@ -8,12 +8,14 @@ interface MenuHeaderProps {
 }
 
 export const MenuHeader: React.FC<MenuHeaderProps> = ({ restaurantInfo }) => {
+  const timestamp = new Date().getTime();
+  
   return (
     <div className="text-white">
       {/* Logo Section - Full Width */}
       <div className="w-full">
         <Image
-          src={`/images/logo-tapioca-final.svg?v=final-${Date.now()}`}
+          src={`/images/tapioca-logo-2024.svg?cache=${timestamp}`}
           alt="Logo Tapioca Recheada de Chapa"
           width={800}
           height={400}
