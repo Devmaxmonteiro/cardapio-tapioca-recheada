@@ -446,37 +446,54 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
                       <div className="flex items-center space-x-2">
                         <input
                           type="checkbox"
+                          id="needsChange"
                           checked={paymentForm.needsChange || false}
-                          onChange={(e) => setPaymentForm(prev => ({ 
-                            ...prev, 
-                            needsChange: e.target.checked,
-                            changeAmount: e.target.checked ? prev.changeAmount : undefined
-                          }))}
-                          className="text-primary-600"
+                          onChange={(e) => {
+                            console.log('Checkbox mudou:', e.target.checked);
+                            setPaymentForm(prev => ({ 
+                              ...prev, 
+                              type: 'money',
+                              needsChange: e.target.checked,
+                              changeAmount: e.target.checked ? (prev.changeAmount || 0) : undefined
+                            }));
+                          }}
+                          className="text-primary-600 w-4 h-4"
                         />
-                        <span className="text-sm">Preciso de troco</span>
+                        <label htmlFor="needsChange" className="text-sm cursor-pointer">Preciso de troco</label>
                       </div>
                       
                       {paymentForm.needsChange && (
-                        <div className="space-y-2">
-                          <label className="text-sm font-medium text-gray-700">
+                        <div className="space-y-2 bg-gray-50 p-3 rounded-lg">
+                          <label className="text-sm font-medium text-gray-700 block">
                             Valor que você tem para pagamento:
                           </label>
                           <input
                             type="number"
                             value={paymentForm.changeAmount || ''}
-                            onChange={(e) => setPaymentForm(prev => ({ 
-                              ...prev, 
-                              changeAmount: parseFloat(e.target.value) || 0
-                            }))}
-                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                            onChange={(e) => {
+                              const value = e.target.value;
+                              console.log('Campo valor mudou:', value);
+                              setPaymentForm(prev => ({ 
+                                ...prev,
+                                type: 'money',
+                                needsChange: true,
+                                changeAmount: value ? parseFloat(value) : undefined
+                              }));
+                            }}
+                            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-base"
                             placeholder={`Mínimo: R$ ${state.total.toFixed(2)}`}
                             min={state.total}
                             step="0.01"
+                            inputMode="decimal"
                           />
                           {paymentForm.changeAmount && paymentForm.changeAmount > state.total && (
-                            <div className="text-sm text-green-600 font-medium">
-                              Troco: R$ {(paymentForm.changeAmount - state.total).toFixed(2)}
+                            <div className="text-sm text-green-600 font-medium bg-green-50 p-2 rounded">
+                              💰 Troco: R$ {(paymentForm.changeAmount - state.total).toFixed(2)}
+                            </div>
+                          )}
+                          {paymentForm.changeAmount && paymentForm.changeAmount < state.total && (
+                            <div className="text-sm text-red-600 font-medium bg-red-50 p-2 rounded">
+                              ⚠️ Valor insuficiente. Mínimo: R$ {state.total.toFixed(2)}
                             </div>
                           )}
                         </div>
