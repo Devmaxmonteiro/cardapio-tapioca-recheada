@@ -1,64 +1,72 @@
-<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background wood texture with golden/orange tone -->
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background wood texture with exact golden/orange tone -->
   <defs>
     <!-- Wood grain pattern -->
-    <pattern id="woodGrain" patternUnits="userSpaceOnUse" width="40" height="300">
-      <rect width="40" height="300" fill="#E6A532"/>
-      <rect x="0" y="0" width="3" height="300" fill="#B8860B"/>
-      <rect x="37" y="0" width="3" height="300" fill="#B8860B"/>
-      <rect x="19" y="0" width="2" height="300" fill="#CD853F"/>
-      <!-- Wood knots -->
-      <ellipse cx="20" cy="80" rx="8" ry="15" fill="#A0522D" opacity="0.6"/>
-      <ellipse cx="20" cy="220" rx="6" ry="12" fill="#A0522D" opacity="0.5"/>
+    <pattern id="woodGrain" patternUnits="userSpaceOnUse" width="50" height="400">
+      <rect width="50" height="400" fill="#E6A532"/>
+      <rect x="0" y="0" width="4" height="400" fill="#B8860B"/>
+      <rect x="46" y="0" width="4" height="400" fill="#B8860B"/>
+      <rect x="24" y="0" width="2" height="400" fill="#CD853F"/>
+      <!-- Wood knots and texture -->
+      <ellipse cx="25" cy="100" rx="10" ry="20" fill="#A0522D" opacity="0.4"/>
+      <ellipse cx="25" cy="280" rx="8" ry="15" fill="#A0522D" opacity="0.3"/>
     </pattern>
     
-    <!-- Main wood gradient -->
+    <!-- Main wood gradient to match original -->
     <linearGradient id="woodBackground" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#F4A460;stop-opacity:1" />
-      <stop offset="25%" style="stop-color:#E6A532;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#DAA520;stop-opacity:1" />
-      <stop offset="75%" style="stop-color:#E6A532;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#CD853F;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#E6A532;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#E6A532;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#CD853F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
     </linearGradient>
+    
+    <!-- Shadow for text -->
+    <filter id="textShadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="1" flood-color="#654321" flood-opacity="0.5"/>
+    </filter>
   </defs>
   
   <!-- Wood background -->
-  <rect width="800" height="300" fill="url(#woodBackground)"/>
-  <rect width="800" height="300" fill="url(#woodGrain)" opacity="0.4"/>
+  <rect width="800" height="400" fill="url(#woodBackground)"/>
+  <rect width="800" height="400" fill="url(#woodGrain)" opacity="0.3"/>
   
-  <!-- Vertical wood planks -->
-  <g stroke="#8B4513" stroke-width="4" opacity="0.7">
-    <line x1="100" y1="0" x2="100" y2="300"/>
-    <line x1="200" y1="0" x2="200" y2="300"/>
-    <line x1="300" y1="0" x2="300" y2="300"/>
-    <line x1="400" y1="0" x2="400" y2="300"/>
-    <line x1="500" y1="0" x2="500" y2="300"/>
-    <line x1="600" y1="0" x2="600" y2="300"/>
-    <line x1="700" y1="0" x2="700" y2="300"/>
+  <!-- Vertical wood planks - more realistic spacing -->
+  <g stroke="#8B4513" stroke-width="5" opacity="0.6">
+    <line x1="80" y1="0" x2="80" y2="400"/>
+    <line x1="160" y1="0" x2="160" y2="400"/>
+    <line x1="240" y1="0" x2="240" y2="400"/>
+    <line x1="320" y1="0" x2="320" y2="400"/>
+    <line x1="400" y1="0" x2="400" y2="400"/>
+    <line x1="480" y1="0" x2="480" y2="400"/>
+    <line x1="560" y1="0" x2="560" y2="400"/>
+    <line x1="640" y1="0" x2="640" y2="400"/>
+    <line x1="720" y1="0" x2="720" y2="400"/>
   </g>
   
   <!-- White circle background for stars and tapioca -->
-  <circle cx="400" cy="80" r="55" fill="white" stroke="#8B4513" stroke-width="4"/>
+  <circle cx="400" cy="120" r="70" fill="white" stroke="#8B4513" stroke-width="5"/>
   
-  <!-- Three stars in the circle -->
+  <!-- Three stars in the circle - positioned like original -->
   <g fill="#8B4513">
     <!-- Left star -->
-    <polygon points="360,75 364,85 375,85 367,92 370,102 360,96 350,102 353,92 345,85 356,85" />
-    <!-- Center star (bigger) -->
-    <polygon points="400,65 405,78 420,78 409,87 413,100 400,93 387,100 391,87 380,78 395,78" />
+    <polygon points="350,115 355,128 370,128 358,138 363,151 350,143 337,151 342,138 330,128 345,128" />
+    <!-- Center star (bigger and higher) -->
+    <polygon points="400,100 407,118 428,118 413,131 420,149 400,139 380,149 387,131 372,118 393,118" />
     <!-- Right star -->
-    <polygon points="440,75 444,85 455,85 447,92 450,102 440,96 430,102 433,92 425,85 436,85" />
+    <polygon points="450,115 455,128 470,128 458,138 463,151 450,143 437,151 442,138 430,128 445,128" />
   </g>
   
-  <!-- Tapioca shape (half circle/semicircle) -->
-  <path d="M 480 60 Q 550 70 540 110 Q 530 120 480 110 Z" fill="white" stroke="#8B4513" stroke-width="4"/>
+  <!-- Tapioca shape (semicircle) - positioned like original -->
+  <path d="M 520 90 Q 600 105 590 155 Q 580 170 520 155 Z" fill="white" stroke="#8B4513" stroke-width="5"/>
   
-  <!-- TAPIOCA text - large and bold -->
-  <text x="400" y="180" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" text-anchor="middle" fill="#8B4513" letter-spacing="2px">TAPIOCA</text>
+  <!-- TAPIOCA text - large, bold, and positioned like original -->
+  <text x="400" y="260" font-family="Arial Black, sans-serif" font-size="90" font-weight="900" text-anchor="middle" fill="#8B4513" letter-spacing="3px" filter="url(#textShadow)">TAPIOCA</text>
   
-  <!-- Recheada text - green and italic -->
-  <text x="400" y="220" font-family="Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#32CD32" font-style="italic" letter-spacing="1px">Recheada</text>
+  <!-- Recheada text - green, italic, and styled like original -->
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#32CD32" font-style="italic" letter-spacing="2px" filter="url(#textShadow)">Recheada</text>
   
-  <!-- DE CHAPA text -->
-  <text x="400" y="250" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#8B4513" letter-spacing="3px">DE CHAPA</text>
+  <!-- DE CHAPA text - smaller and spaced -->
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#8B4513" letter-spacing="6px" filter="url(#textShadow)">DE CHAPA</text>
 </svg> 
