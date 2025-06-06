@@ -480,25 +480,23 @@ export const Checkout: React.FC<CheckoutProps> = ({ isOpen, onClose }) => {
                             Valor que você tem para pagamento:
                           </label>
                           <input
-                            type="text"
-                            value={paymentForm.changeAmount ? paymentForm.changeAmount.toString() : ''}
+                            type="number"
+                            value={paymentForm.changeAmount || ''}
                             onChange={(e) => {
                               const value = e.target.value;
                               console.log('Campo valor mudou:', value);
-                              // Permitir apenas números e ponto decimal
-                              if (value === '' || /^\d*\.?\d*$/.test(value)) {
-                                setPaymentForm(prev => ({ 
-                                  ...prev,
-                                  type: 'money',
-                                  needsChange: true,
-                                  changeAmount: value === '' ? undefined : parseFloat(value) || 0
-                                }));
-                              }
+                              setPaymentForm(prev => ({ 
+                                ...prev,
+                                type: 'money',
+                                needsChange: true,
+                                changeAmount: value ? parseFloat(value) : undefined
+                              }));
                             }}
                             className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 text-base"
                             placeholder={`Mínimo: R$ ${state.total.toFixed(2)}`}
+                            min="0"
+                            step="0.01"
                             inputMode="decimal"
-                            pattern="[0-9]*\.?[0-9]*"
                           />
                           {paymentForm.changeAmount && paymentForm.changeAmount > state.total && (
                             <div className="text-sm text-green-600 font-medium bg-green-50 p-2 rounded">
