@@ -63,8 +63,8 @@
   <!-- TAPIOCA text - positioned like in the new image -->
   <text x="400" y="160" font-family="Arial Black, sans-serif" font-size="80" font-weight="900" text-anchor="middle" fill="#8B4513" letter-spacing="4px">TAPIOCA</text>
   
-  <!-- Recheada text - GREEN and ITALIC exactly like the new image -->
-  <text x="400" y="210" font-family="Arial, sans-serif" font-size="45" font-weight="bold" text-anchor="middle" fill="#32CD32" font-style="italic" letter-spacing="3px">Recheada</text>
+  <!-- Recheada text - YELLOW and ITALIC exactly like the user's image -->
+  <text x="400" y="210" font-family="Arial, sans-serif" font-size="45" font-weight="bold" text-anchor="middle" fill="#FFFF00" font-style="italic" letter-spacing="3px">Recheada</text>
   
   <!-- DE CHAPA text -->
   <text x="400" y="250" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="#8B4513" letter-spacing="8px">DE CHAPA</text>
