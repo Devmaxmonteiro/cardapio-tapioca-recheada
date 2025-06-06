@@ -54,13 +54,18 @@
     <polygon points="395,85 402,98 417,98 406,108 411,121 395,113 379,121 384,108 373,98 388,98"/>
   </g>
   
-  <!-- Tapioca semicircle to the RIGHT of the circle -->
-  <path d="M 460 60 Q 540 75 530 125 Q 520 140 460 125 Z" fill="white" stroke="#8B4513" stroke-width="8"/>
+  <!-- Tapioca semicircle to the RIGHT of the circle - adjusted like second image -->
+  <path d="M 450 55 Q 520 65 515 110 Q 510 120 450 110 Z" fill="white" stroke="#8B4513" stroke-width="8"/>
+  <!-- Tapioca edge detail -->
+  <path d="M 450 55 Q 460 50 470 55 Q 480 60 490 55 Q 500 50 510 55 Q 515 60 515 65" fill="none" stroke="#8B4513" stroke-width="3"/>
   
   <!-- TAPIOCA text - large and bold -->
   <text x="400" y="230" font-family="Arial Black, sans-serif" font-size="110" font-weight="900" text-anchor="middle" fill="#8B4513" letter-spacing="6px">TAPIOCA</text>
   
-  <!-- Recheada text - YELLOW and ITALIC exactly like the second image -->
+  <!-- Recheada text - YELLOW with BROWN shadow exactly like the second image -->
+  <!-- Brown shadow/outline for Recheada -->
+  <text x="402" y="297" font-family="Brush Script MT, cursive" font-size="65" font-weight="bold" text-anchor="middle" fill="#8B4513" font-style="italic" letter-spacing="2px">Recheada</text>
+  <!-- Yellow text on top -->
   <text x="400" y="295" font-family="Brush Script MT, cursive" font-size="65" font-weight="bold" text-anchor="middle" fill="#FFFF00" font-style="italic" letter-spacing="2px">Recheada</text>
   
   <!-- DE CHAPA text -->
